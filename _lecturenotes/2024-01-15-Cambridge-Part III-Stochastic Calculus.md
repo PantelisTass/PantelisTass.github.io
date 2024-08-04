@@ -4,7 +4,7 @@ collection: lecturenotes
 type: "Part III"
 permalink: /lecturenotes/2023-stochastic-calculus
 venue: "University of Cambridge, DPMMS"
-date: 2080-01-15
+date: 2024-01-15
 location: "Cambridge, United kingdom"
 ---
 
