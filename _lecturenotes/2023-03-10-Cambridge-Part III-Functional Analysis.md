@@ -9,3 +9,6 @@ location: "Cambridge, United kingdom"
 ---
 
 [Handwritten lecture notes](http://PantelisTass.github.io/files/Functional Analysis handwritten notes.pdf)
+
+[Typed lecture notes](http://PantelisTass.github.io/files/Part_III_Functional_Analysis_Michaelmas_2023.pdf)
+
