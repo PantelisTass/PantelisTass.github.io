@@ -10,4 +10,4 @@ location: "Cambridge, UK"
 
 This is a presentation of the research I undertook under the supervision of Professor of Applied Mathematics Greg Pavliotis during my last year at Imperial College London on the mathematics of machine learning algorithms, during my PhD interview.
 
-[Presentation:]
+[Presentation](http://PantelisTass.github.io/files/)
