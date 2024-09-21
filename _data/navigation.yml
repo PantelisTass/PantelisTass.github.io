@@ -1,0 +1,23 @@
+# main links links
+main:
+  - title: "Publications and Preprints"
+    url: /publications/
+
+#  - title: "Talks"
+#    url: /talks/    
+
+  - title: "Teaching"
+    url: /teaching/  
+
+  - title: "Classes Taken"
+    url: /classes/
+
+  - title: "Projects and Summer Research"
+    url: /projects/
+        
+#  - title: "Blog Posts"
+#    url: /year-archive/
+    
+  - title: "CV"
+    url: /files/resume.pdf
+
