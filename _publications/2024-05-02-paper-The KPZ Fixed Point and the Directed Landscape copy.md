@@ -6,7 +6,7 @@ permalink: /publications/2024-05-02-paper-The KPZ Fixed Point and the Directed L
 excerpt: 'The term “KPZ” stands for the initials of three physicists, namely Kardar, Parisi and Zhang, which, in 1986 conjectured the existence of universal scaling behaviours for many random growth processes in the plane.
 
 
-A process is said to belong to the KPZ universality class if one can associate to it an appropriate “height function” and show that its 3:2:1 (time : space: fluc- tuation) scaling limit, see 1.2, converges to a universal random process, the KPZ fixed point. Alternatively, membership is loosely characterised by having: 1. Local dynamics; 2. A smoothing mechanism; 3. Slope-dependent growth rate (lateral growth); 4. Space-time random forcing with the rapid decay of correlations.
+A process is said to belong to the KPZ universality class if one can associate to it an appropriate “height function” and show that its 3:2:1 (time : space: fluctuation) scaling limit, see 1.2, converges to a universal random process, the KPZ fixed point. Alternatively, membership is loosely characterised by having: 1. Local dynamics; 2. A smoothing mechanism; 3. Slope-dependent growth rate (lateral growth); 4. Space-time random forcing with the rapid decay of correlations.
 
 
 The central object that we will study is the so-called KPZ fixed point, which belongs to the KPZ universality class. Many strides have been made in the last couple of decades in this field, with constructions of the KPZ fixed point from certain processes such as the totally asymmetric simple exclusion process (with arbitrary initial condition) and Brownian last passage percolation.
