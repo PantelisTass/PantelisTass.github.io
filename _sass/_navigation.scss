@@ -266,12 +266,30 @@
       margin: 0;
       padding: 10px 20px;
       font-size: $type-size-5;
+      position: relative;
 
-      &:hover {
-        color: $masthead-link-color-hover;
-        background: $light-gray;
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 4px;
+        background: $dark-gray;
+        width: 100%;
+        -webkit-transition: $global-transition;
+        transition: $global-transition;
+        -webkit-transform: scaleX(0);
+            -ms-transform: scaleX(0);
+                transform: scaleX(0); /* hide*/
+      }
+
+      &:hover:before {
+        -webkit-transform: scaleX(1);
+            -ms-transform: scaleX(1);
+                transform: scaleX(1); /* reveal*/
       }
     }
+
 
     &:before {
       content: "";
@@ -332,6 +350,27 @@
     }
   }
 
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    background: $dark-gray;
+    width: 100%;
+    -webkit-transition: $global-transition;
+    transition: $global-transition;
+    -webkit-transform: scaleX(0);
+        -ms-transform: scaleX(0);
+            transform: scaleX(0); /* hide*/
+  }
+
+  &:hover:before {
+    -webkit-transform: scaleX(1);
+        -ms-transform: scaleX(1);
+            transform: scaleX(1); /* reveal*/
+  }
+
   .active {
     margin-left: -0.5em;
     padding-left: 0.5em;
@@ -345,6 +384,7 @@
       color: #fff;
     }
   }
+  
 }
 
 .nav__title {
