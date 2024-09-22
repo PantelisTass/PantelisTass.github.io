@@ -1,7 +1,8 @@
 ---
 title: "New outlook on profitability of rogue mining strategies"
 collection: publications
-permalink: /publication/2022-08-13-paper-New-outlook-on-profitability-of-rogue-mining-strategies
+type: preprints
+permalink: /publications/2022-08-13-paper-New-outlook-on-profitability-of-rogue-mining-strategies
 excerpt: 'Many of the recent works on the profitability of rogue mining strategies hinge
 on a parameter called gamma (γ) that measures the proportion of the honest
 network attracted by the attacker to mine on top of his fork. Cyril Grunspan and Ricardo P´erez-Marco, in two papers released in 2018, have surmised conclusions based on premises that

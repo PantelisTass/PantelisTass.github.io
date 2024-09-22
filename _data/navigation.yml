@@ -12,6 +12,9 @@ main:
   - title: "Classes Taken"
     url: /classes/
 
+  - title: "Conferenes"
+    url: /conferences/
+
   - title: "Projects and Summer Research"
     url: /projects/
         

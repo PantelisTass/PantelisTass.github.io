@@ -1,6 +1,5 @@
 ---
 layout: archive
-title: "Publications"
 permalink: /publications/
 author_profile: true
 ---
@@ -11,6 +10,18 @@ author_profile: true
 
 {% include base_path %}
 
+<!-- Publications Section -->
+<h1>Publications</h1>
 {% for post in site.publications reversed %}
-  {% include archive-single.html %}
+  {% if post.type == 'publications' %}
+    {% include archive-single.html %}
+  {% endif %}
+{% endfor %}
+
+<!-- Preprints Section -->
+<h1>Preprints</h1>
+{% for post in site.publications reversed %}
+  {% if post.type == 'preprints' %}
+    {% include archive-single.html %}
+  {% endif %}
 {% endfor %}

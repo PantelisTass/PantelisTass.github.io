@@ -3,14 +3,13 @@ title: "Undergraduate Teaching Assistant"
 collection: teaching
 type: "Undergraduate course"
 permalink: /teaching/2022-fall-teaching-analysis
-venue: Imperial College London, Department of Mathematics"
+venue: "Imperial College London, Department of Mathematics"
 date: 2022-10-20
 location: "London, United Kingdom"
 ---
 
 I was a teaching assistant in the first-year course in analysis. I had the responsibility of
-conducting demonstrations and coordinating problem-solving sessions.
-
+conducting demonstrations and coordinating problem-solving sessions. 
 <h3>Indicative syllabus</h3>
  <ol>
   <li>Real Numbers: The archimedean property, and density of Q in R; The completeness axiom; Sup and Inf, and basic properties; Decimal Expansions; Countability and uncountability.</li>
