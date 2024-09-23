@@ -8,7 +8,7 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-title                    : "Pantelis Tassopoulos / My personal webpage"
+title                    : "Pantelis Tassopoulos"
 title_separator          : "-"
 name                     : &name "Pantelis tassopoulos"
 description              : &description "This is my personal website, still at a working stage, where I aim to include my academic work/interests and beyond!"
