@@ -14,8 +14,8 @@ The central object that we will study is the so-called KPZ fixed point, which be
 
 In this essay, we: 1. delineate the origins of KPZ universality; 2. describe and motivate canonical models; 3. give an overview of recent developments, especially those in the 2018 Dauvergne, Ortmann and Virag (DOV) paper; 4. present the strategy of and key points in the proof of the absolute continuity result of the KPZ fixed point by Sarkar and Virag; 5. conclude with remarks for future directions. The presentation is such that the content is displayed in a way that is as self-contained as possible and aimed at a motivated audience that has mastered the fundamentals of the theory of probability.'
 date: 2024-05-02
-venue: 'Preprint (TBD)'
-paperurl: '/files/Part_III_Essay.pdf'
+venue: 'arXiv'
+paperurl: 'https://arxiv.org/pdf/2409.14920'
 citation: 'Pantelis Tassopoulos. (2024). The KPZ fixed point and the Directed landscape.'
 ---
 
