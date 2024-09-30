@@ -1,5 +1,5 @@
 ---
-title: "Brownian Moiton and the Stochastic Behaviour of Stocks"
+title: "Brownian Motion and the Stochastic Behaviour of Stocks"
 collection: publications
 type: publications
 permalink: /publication/2021-paper-Brownian Motion and the Stochastic behaviour of Stocks
