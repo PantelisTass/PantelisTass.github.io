@@ -1,13 +1,12 @@
 ---
 permalink: /
-title: "Welcome to my personal webpage!"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-
+<h1>Welcome to my personal webpage!</h1>
 
 My name is Pantelelis Tassopoulos, and I am currently pursuing a PhD in Probability Theory at the University of Cambridge (expected completion July 2027), studying a notion of universality encompassing a large class of random growth processes in the plane, namely, KPZ universality, under the supervision of Dr Sourav Sarkar.
 
