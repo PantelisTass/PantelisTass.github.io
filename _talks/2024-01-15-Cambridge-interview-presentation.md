@@ -1,7 +1,7 @@
 ---
 title: "Cambridge Phd Maths interview presentation"
 collection: talks
-type: "Conference proceedings talk"
+type: "PhD interview"
 permalink: /talks/2024-01-15-Cambridge-interview-presentation
 venue: "University of Cambridge"
 date: 2024-01-15
