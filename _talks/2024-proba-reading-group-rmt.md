@@ -4,8 +4,8 @@ collection: talks
 type: "Talk"
 permalink: /talks/2024-proba-reading-group-rmt
 venue: "DPMMS, Cambridge University"
-date: 2012-03-01
-location: "San Francisco, California"
+date: 2024-12-05
+location: "Cambridge, United Kingdom"
 ---
 
 The aim of these notes is to provide a survey of some basic theory and classical results in
