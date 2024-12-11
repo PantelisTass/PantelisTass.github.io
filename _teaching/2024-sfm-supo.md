@@ -4,7 +4,7 @@ collection: teaching
 type: "Undergraduate course"
 permalink: /teaching/2024-sfm-supo
 venue: "CMS, University of Cambridge"
-date: 2024-2025
+date: 2024-11-10
 location: "Cambridge, United Kingdom"
 ---
 
