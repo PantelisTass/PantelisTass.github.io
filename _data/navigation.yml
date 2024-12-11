@@ -15,12 +15,12 @@ main:
   - title: "Conferences"
     url: /conferences/
 
+  - title: "CV"
+    url: /files/resume.pdf
+
   - title: "Projects and Summer Research"
     url: /projects/
         
-#  - title: "Blog Posts"
-#    url: /year-archive/
-    
-  - title: "CV"
-    url: /files/resume.pdf
+  - title: "Blog Posts"
+    url: /year-archive/
 
