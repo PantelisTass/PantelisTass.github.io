@@ -9,5 +9,5 @@ author_profile: true
 
 
 {% for post in site.classes reversed%}
-  {% include archive-single.html %}
+  {% if post.type = "Imperial" include archive-single.html %}
 {% endfor %}
