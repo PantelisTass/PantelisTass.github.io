@@ -10,13 +10,12 @@ author_profile: true
 <h1>Part III Cambridge maths courses 2023-2024</h1>
 <ul>
 <li><a href = "/files/Part_III_Functional_Analysis_Michaelmas_2023.pdf">Functional Analysis</a></li>
-<li>[Functional Analysis](/files/Part_III_Functional_Analysis_Michaelmas_2023.pdf)</li>
-<li>[Advanced Probability](/files/Part_III_Advanced_Probability_Michaelmas_2023.pdf)</li>
-<li>[Elliptic PDEs](/files/Elliptic%20PDEs.pdf)</li>
-<li>[Stochastic Calculus](/files/Stochastic%20Calculus%20handrwitten%20notes.pdf)</li>
-<li>[Analysis of PDEs](/files/Analysis of PDE.pdf)</li>
-<li>[Distribution Theory](/files/Distribution%20Theory.pdf) </li>
-<li>[Concentration Inequalities](/files/Concentration%20Inequalities.pdf)</li>
+<li><a href = "/files/Part_III_Advanced_Probability_Michaelmas_2023.pdf">Advanced probability</a></li>
+<li><a href = "/files/Elliptic%20PDEs.pdf">Elliptic PDEs</a></li>
+<li><a href = "/files/Stochastic%20Calculus%20handrwitten%20notes.pdf">Stochastic Calculus</a></li>
+<li><a href = "/files/Analysis of PDE.pdf">Analysis of PDE</a></li>
+<li><a href = "/files/Distribution%20Theory.pdf">Distribution Theory</a></li>
+<li><a href = "/files/Concentration%20Inequalities.pdf">Concentration Inequalities</a></li>
 </ul>
 
 <h1>Imperial maths undergraduate courses 2020-2023</h1>
