@@ -8,7 +8,7 @@ date: 2024-2025
 location: "Cambridge, United Kingdom"
 ---
 
-I supervised five thirdy year undergraduates in the Part II course 'Stochastic Financial Models'. I had the responsibility of discussing students' submissions to problem sets (can be found <a href = "https://www.dpmms.cam.ac.uk/study/II/FinancialModels/">here</a>) and more general questions regarding the material.
+I supervised five third year undergraduates in the Part II course 'Stochastic Financial Models'. I had the responsibility of discussing students' submissions to problem sets (can be found <a href = "https://www.dpmms.cam.ac.uk/study/II/FinancialModels/">here</a>) and more general questions regarding the material.
 <h3>Indicative syllabus</h3>
  <ul>
     <li><strong>Standing Assumptions and Notation</strong>
