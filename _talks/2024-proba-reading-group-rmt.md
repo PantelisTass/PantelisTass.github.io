@@ -1,5 +1,5 @@
 ---
-title: "Random matrix theory Talk"
+title: "Topics in random matrix theory"
 collection: talks
 type: "Talk"
 permalink: /talks/2024-proba-reading-group-rmt
