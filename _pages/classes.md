@@ -25,3 +25,8 @@ author_profile: true
   {% endif %}
 {% endfor %}
 
+<h1>Miscellaneous</h1>
+<ul>
+<li><a href = "/files/Random_Matrix_Theory_Lecture_Reading_Group_Cam_2024.pdf">Random matrix theory notes</a></li>
+</ul>
+
