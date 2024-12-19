@@ -9,14 +9,14 @@ main:
   - title: "Notes"
     url: /classes/
 
-  - title: "Talks"
-    url: /talks/    
-
-  - title: "Conferences"
-    url: /conferences/
+#  - title: "Talks"
+#   url: /talks/    
 
   - title: "CV"
     url: /files/resume.pdf
+
+  - title: "Conferences"
+    url: /conferences/
 
   - title: "Projects and Summer Research"
     url: /projects/
