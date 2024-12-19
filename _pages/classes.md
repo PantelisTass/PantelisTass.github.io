@@ -20,12 +20,11 @@ author_profile: true
 
 <h1>Imperial maths undergraduate courses 2020-2023</h1>
 <ul>
-<li>Functional Analysis (2022-2023)<a href = "/files/Functional_Analysis_Coursework_1__01862156_.pdf">Coursework 1</a></li>, <a href = "/files/Functional_Analysis_Coursework_2__01862156_.pdf">Coursework 2</a></li>
-<li>Analytic methods in PDE (2022-2023)<a href = "/files/Analytic_Methods_In_PDE_Coursework_1__01862156_.pdf">Coursework 1</a></li>, <a href = "/files/Analytic_Methods_In_PDE_Coursework_2__01862156_.pdf">Coursework 2</a></li>
-<li>Probability theory (2022-2023)<a href = "/files/Probability_Theory_Coursework_1__01862156_.pdf">Coursework 1</a></li>, <a href = "/files/Probability_Theory_Coursework_2__01862156_.pdf">Coursework 2</a></li>
+<li>Functional Analysis (2022-2023)<a href = "/files/Functional_Analysis_Coursework_1__01862156_.pdf">Coursework 1</a>, <a href = "/files/Functional_Analysis_Coursework_2__01862156_.pdf">Coursework 2</a></li>
+<li>Analytic methods in PDE (2022-2023)<a href = "/files/Analytic_Methods_In_PDE_Coursework_1__01862156_.pdf">Coursework 1</a>, <a href = "/files/Analytic_Methods_In_PDE_Coursework_2__01862156_.pdf">Coursework 2</a></li>
+<li>Probability theory (2022-2023)<a href = "/files/Probability_Theory_Coursework_1__01862156_.pdf">Coursework 1</a>, <a href = "/files/Probability_Theory_Coursework_2__01862156_.pdf">Coursework 2</a></li>
 <li>Fourier analysis and the theory of distributions (2022-2023)<a href = "/files/Fourier_Analysis_and_the_theory_of_distributions_Coursework_1__01862156_.pdf">Coursework 1</a></li>
 <li>An Introduction to SDEs and Diffusion Processes (2022-2023)<a href = "/files/Introduction_To_SDEs_And_Diffusion_Processes_Coursework_1__01862156_.pdf">Coursework 1</a></li>
-
 </ul>
 
 <h1>Miscellaneous</h1>
