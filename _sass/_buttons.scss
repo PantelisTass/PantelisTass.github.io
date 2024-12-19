@@ -49,7 +49,7 @@
 
   &--inverse {
     color: $dark-gray !important;
-    border: 1px solid $light-gray !important; /* override*/
+    border: 1px solid $head-color !important; /* override*/
     background-color: $head-color;
 
     &:hover {
