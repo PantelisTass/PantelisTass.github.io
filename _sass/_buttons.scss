@@ -11,7 +11,7 @@
   display: inline-block;
   margin-bottom: 0.25em;
   padding: 0.5em 1em;
-  color: #fff !important;
+  color: $background-color !important;
   font-family: $sans-serif;
   font-size: $type-size-6;
   font-weight: bold;
@@ -53,7 +53,7 @@
     background-color: $head-color;
 
     &:hover {
-      color: #fff !important;
+      color: $background-color !important;
       border-color: $dark-gray;
     }
   }
@@ -61,7 +61,7 @@
   /* light outline */
 
   &--light-outline {
-    border: 1px solid #fff !important; /* override*/
+    border: 1px solid $background-color !important; /* override*/
     background-color: transparent;
   }
 
