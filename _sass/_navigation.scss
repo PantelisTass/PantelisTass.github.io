@@ -375,13 +375,13 @@
     margin-left: -0.5em;
     padding-left: 0.5em;
     padding-right: 0.5em;
-    color: #fff;
+    color: $background-color;
     font-weight: bold;
     background: $primary-color;
     border-radius: $border-radius;
 
     &:hover {
-      color: #fff;
+      color: $background-color;
     }
   }
   
@@ -422,7 +422,7 @@
   box-shadow: $box-shadow;
 
   .nav__title {
-    color: #fff;
+    color: $background-color;
     font-size: $type-size-6;
     background: $head-color;
     border-top-left-radius: $border-radius;
