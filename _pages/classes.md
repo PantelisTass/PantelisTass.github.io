@@ -7,7 +7,7 @@ author_profile: true
 
 {% include base_path %}
 
-<h1>Part III Cambridge maths courses 2023-2024</h1>
+<h1>Part III Cambridge maths course notes 2023-2024</h1>
 <ul>
 <li><a href = "/files/Part_III_Functional_Analysis_Michaelmas_2023.pdf">Functional Analysis</a></li>
 <li><a href = "/files/Part_III_Advanced_Probability_Michaelmas_2023.pdf">Advanced probability</a></li>
