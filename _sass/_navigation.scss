@@ -175,7 +175,7 @@
 .greedy-nav {
   position: relative;
   min-width: 250px;
-  background: $light-gray;
+  background: $head-color;
 
   a {
     display: block;
@@ -312,7 +312,7 @@
       width: 0;
       border-style: solid;
       border-width: 0 10px 10px;
-      border-color: $light-gray transparent;
+      border-color: $head-color transparent;
       display: block;
       z-index: 1;
     }
