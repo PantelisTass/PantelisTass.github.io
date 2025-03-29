@@ -8,7 +8,7 @@ date: 2025-01-18
 location: "Cambridge, United Kingdom"
 ---
 
-I supervised five third year undergraduates in the Part II course 'Applied Probability'. I had the responsibility of discussing students' submissions to problem sets (can be found <a href = "https://www.dpmms.cam.ac.uk/study/II/AppliedProbability/">here</a>) and more general questions regarding the material.
+I supervised six third year undergraduates in the Part II course 'Applied Probability'. I had the responsibility of discussing students' submissions to problem sets (can be found <a href = "https://www.dpmms.cam.ac.uk/study/II/AppliedProbability/">here</a>) and more general questions regarding the material.
 
 <h3>Applied Probability - Course Outline</h3>
     <ul>
@@ -18,4 +18,3 @@ I supervised five third year undergraduates in the Part II course 'Applied Proba
         <li><strong>Renewal Processes:</strong> Introduction, Elementary Renewal Theorem, Size Biased Picking, Equilibrium Theory of Renewal Processes, Renewal-Reward Processes, Example (Alternating Renewal Process, Busy Periods of M/G/1 Queue), Little’s Formula, G/G/1 Queue.</li>
         <li><strong>Spatial Poisson Processes:</strong> Definition and superposition, Conditioning, Renyi's Theorem.</li>
     </ul>
-    
