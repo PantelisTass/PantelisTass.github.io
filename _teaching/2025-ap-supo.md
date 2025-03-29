@@ -9,7 +9,7 @@ location: "Cambridge, United Kingdom"
 ---
 
 I supervised six third year undergraduates in the Part II course 'Applied Probability'. I had the responsibility of discussing students' submissions to problem sets (can be found <a href = "https://www.dpmms.cam.ac.uk/study/II/AppliedProbability/">here</a>) and more general questions regarding the material.
-<h3>Applied Probability - Course Outline</h3>
+<h3>AIndicative syllabus</h3>
     <ul>
         <li><strong>Basic Aspects of Continuous Time Markov Chains:</strong> Markov Property, Regular Jump Chain, Holding Times, Poisson Process, Birth Process, Construction of Continuous Time Markov Chains, Kolmogorov’s Forward and Backward Equations, Non-minimal Chains.</li>
         <li><strong>Qualitative Properties of Continuous Time Markov Chains:</strong> Class Structure, Hitting Times, Recurrence and Transience, Invariant Distributions, Convergence to Equilibrium, Reversibility, Ergodic Theorem.</li>
