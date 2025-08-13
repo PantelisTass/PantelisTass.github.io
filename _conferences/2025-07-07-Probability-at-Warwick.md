@@ -13,16 +13,16 @@ excerpt: "<h3>A brief description from the conference website</h3>
 Below are the topics lectured at the conference and my rough notes thereof.
 
 
-[The supercritical GMC](/files/P@W 2025 Martin Hairer Notes.pdf)
+[The supercritical GMC (Martin Hairer)](/files/P@W 2025 Martin Hairer Notes.pdf)
 
 
-[Scaling limits of random planar maps](/files/P@W 2025 Nina Holden Notes.pdf)
+[Scaling limits of random planar maps (Nina Holden)](/files/P@W 2025 Nina Holden Notes.pdf)
 
 
-[Localization transition for directed polymers in a random environment (in dimension larger than 3)](/files/P@W 2025 Nina Hubert Lacoin.pdf)
+[Localization transition for directed polymers in a random environment in dimension larger than 3 (Hubert Lacoin)](/files/P@W 2025 Nina Hubert Lacoin.pdf)
 
 
-[Infinite-dimensional Bayesian inference for time evolution PDEs](/files/P@W 2025 Richard Nickl Notes.pdf)
+[Infinite-dimensional Bayesian inference for time evolution PDEs (Richard Nickl)](/files/P@W 2025 Richard Nickl Notes.pdf)
 
 "
 permalink: /classes/2025-07-07-Probability-at-Warwick
