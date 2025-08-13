@@ -4,9 +4,9 @@ collection: conferences
 type: "Warwick"
 excerpt: "<h3>A brief description from the conference website</h3>
 
-The <a href = "https://warwick.ac.uk/fac/sci/statistics/news/patw_summer_school/"> P@W Summer School </a> - Recent Trends in Probability and Statistics is the inaugural summer school in Probability and Statistics that will be held at the University of Warwick from the 7th-11th July 2025.
+<i>The <a href = "https://warwick.ac.uk/fac/sci/statistics/news/patw_summer_school/"> P@W Summer School </a> - Recent Trends in Probability and Statistics is the inaugural summer school in Probability and Statistics that will be held at the University of Warwick from the 7th-11th July 2025.</i>
 
-The purpose of the school is to engage PhD students and early-career researchers with cutting-edge topics at the frontiers of current knowledge. It will feature four lecture courses by leading experts that will explore recent developments on different themes: stochastic PDEs, random planar maps, directed polymers and Bayesian inference for time evolution PDEs. The programme will be complemented by discussion and exercise sessions so to maximise interaction among participants and speakers.
+<i>The purpose of the school is to engage PhD students and early-career researchers with cutting-edge topics at the frontiers of current knowledge. It will feature four lecture courses by leading experts that will explore recent developments on different themes: stochastic PDEs, random planar maps, directed polymers and Bayesian inference for time evolution PDEs. The programme will be complemented by discussion and exercise sessions so to maximise interaction among participants and speakers.</i>
 
 Below are the topics lectured at the conference and my rough notes thereof.
 
