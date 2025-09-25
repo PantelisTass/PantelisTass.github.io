@@ -10,8 +10,8 @@ Furthermore, when the initial data is homogeneous, we establish optimal growth o
 As an application of our framework, we show that the Radon-Nikodym derivative of certain toy models for the KPZ fixed point lies in $L^{\infty-}(\mu)$, inspired by its variational characterisation in terms of the directed landscape.'
 date: 2024-05-02
 venue: 'arXiv'
-paperurl: 'https://arxiv.org/pdf/2409.14920'
+paperurl: 'https://arxiv.org/pdf/2509.19414'
 citation: 'Pantelis Tassopoulos and Sourav Sarkar. Radon-Nikodym derivative of inhomogeneous Brownian last passage percolation. arXiv:2509.19414, 2025.'
 ---
 
-[Download paper here](/files/Part_III_Essay.pdf)
+[Download paper here](/files/2509.19414v1.pdf)

@@ -10,4 +10,4 @@ paperurl: 'https://arxiv.org/pdf/2509.19415'
 citation: 'Pantelis Tassopoulos and Sourav Sarkar. Quantitative Brownian regularity of the KPZ fixed point with meagre initial data. arXiv:2509.19415, 2025.'
 ---
 
-[Download paper here](/files/Part_III_Essay.pdf)
+[Download paper here](/files/2509.19415v1.pdf)
