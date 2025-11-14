@@ -11,4 +11,3 @@ citation: 'Pantelis Tassopoulos and Sourav Sarkar. Quantitative Brownian regular
 ---
 
 [Download paper here](/files/2509.19415v1.pdf)
-
