@@ -2,7 +2,7 @@
 title: "Quantitative Brownian regularity of the KPZ fixed point with arbitrary initial data"
 collection: publications
 type: preprints
-permalink: /publications/2025-09-23-paper-Quantitative Brownian regularity of KPZ fixed point arbitrary initial data
+permalink: /publications/2025-09-23-paper-Quantitative-Brownian-regularity-of-KPZ-fixed-point-arbitrary-initial-data
 excerpt: 'We show that the spatial increments of the KPZ fixed point starting from arbitrary (finitary) initial data, exhibit strong quantitative comparison against rate two Brownian motion on compacts.
 date: 2025-09-23
 venue: 'arXiv'
