@@ -1,13 +1,13 @@
 ---
-title: "Quantitative Brownian regularity of the KPZ fixed point with arbitrary initial data"
+title: "Radon-Nikodym derivative of inhomogeneous Brownian last passage percolation"
 collection: publications
 type: preprints
-permalink: /publications/2025-09-24-paper-Quantitative-Brownian-regularity-of-KPZ-fixed-point-arbitrary-initial-data
-excerpt: 'We show that the spatial increments of the KPZ fixed point starting from arbitrary (finitary) initial data, exhibit strong quantitative comparison against rate two Brownian motion on compacts.
-date: 2025-09-24
+permalink: /publications/2025-09-23-paper-Radon-Nikodym-inhomogeneous-BLPP
+excerpt: 'We show that the Radon-Nikodym derivative of the law of the spatial increments (with endpoints away from the origin) of inhomogeneous Brownian last passage percolation (LPP) with non-decreasing initial data against the Wiener measure $\mu$ on compacts is in $L^{\infty-}(\mu)$; and for any fixed $p>1$, the $L^p$ norm is at most of the order $O_p(\mathrm{e}^{d_pm^2\log m})$ for some $p$-dependent constant $d_p>0$. Furthermore, when the initial data is homogeneous, we establish optimal growth on $L^p$ norms ($\asymp O(\exp(dm^2))$) of the Radon-Nikodym derivative of the Brownian LPP (i.e. top line of an $m$-level Dyson Brownian motion) away from the origin, as the number of curves $m$ tends to infinity, for all $p>1$ sufficiently large. As an application of our framework, we show that the Radon-Nikodym derivative of certain toy models for the KPZ fixed point lies in $L^{\infty-}(\mu)$, inspired by its variational characterisation in terms of the directed landscape.'
+date: 2025-09-23
 venue: 'arXiv'
-paperurl: 'https://arxiv.org/pdf/2509.19415'
-citation: 'Pantelis Tassopoulos and Sourav Sarkar. Quantitative Brownian regularity of the KPZ fixed point with arbitrary initial data. arXiv:2509.19415, 2025.'
+paperurl: 'https://arxiv.org/pdf/2509.19414'
+citation: 'Pantelis Tassopoulos and Sourav Sarkar. Radon-Nikodym derivative of inhomogeneous Brownian last passage percolation. arXiv:2509.19414, 2025.'
 ---
 
-[Download paper here](/files/2509.19415v1.pdf)
+[Download paper here](/files/2509.19414v1.pdf)
