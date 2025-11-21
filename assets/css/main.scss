@@ -41,10 +41,5 @@
 @import "print";
 
 body {
-  background-image: url('{{ site.background_texture }}'); // from _config.yml
-  background-repeat: repeat;       // tiles the texture
-  background-size: auto;           // or 'contain'/'cover'
-  background-attachment: fixed;    // texture stays while scrolling
-  background-position: top left;   // optional, starting point
-  background-color: #f0f0f0;      // fallback color
+  background-image: url('/assets/images/wrinkled-brown-paper.jpg');
 }
