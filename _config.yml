@@ -11,6 +11,7 @@ locale                   : "en-US"
 title                    : "Pantelis Tassopoulos"
 title_separator          : "-"
 name                     : &name "Pantelis tassopoulos"
+theme                    : minimal-mistakes-jekyll
 background_texture       : /assets/images/wrinkled-brown-paper.jpg
 description              : &description "This is my personal website, still at a working stage, where I aim to include my academic work/interests and beyond!"
 url                      : https://pantelistassopoulos.com # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
