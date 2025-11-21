@@ -20,5 +20,5 @@ My interests more generally are in Probability Theory, Stochastic analysis and S
 
 Mentors that have guided me through my academic journey so far inlude: Dr. Sourav Sarkar, Dr. Paul Russell, Professor Perla Sousi, Professor Gregorios Pavliotis, Dr. Ajay Chandra, Sr. Pierre-Francois Rodriguez, Professor Igor Krasovsky and Professor Jonathan Mestel.
 
-$$\int \mu (dx)$$
+$$\int \mu (dx) + 42$$
 
