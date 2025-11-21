@@ -41,9 +41,9 @@
 @import "print";
 
 body {
-  background-image: url('/assets/images/wrinkled-brown-paper.jpg');
+  background-image: url('/assets/images/graph paper texture.jpg');
   background-repeat: repeat;
-  background-size: auto;          // or 'cover' if you want it full screen
+  background-size: cover;          // or 'cover' if you want it full screen
   background-attachment: fixed;  // keeps background in place while scrolling
   background-color: #f0f0f0;     // fallback color
 }
