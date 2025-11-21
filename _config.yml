@@ -12,7 +12,6 @@ title                    : "Pantelis Tassopoulos"
 title_separator          : "-"
 name                     : &name "Pantelis tassopoulos"
 background_texture       : /assets/images/wrinkled-brown-paper.jpg
-theme                    : Minimal          
 description              : &description "This is my personal website, still at a working stage, where I aim to include my academic work/interests and beyond!"
 url                      : https://pantelistassopoulos.com # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
