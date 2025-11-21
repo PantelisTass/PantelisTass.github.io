@@ -1,24 +1,39 @@
-/* Move sidebar slightly left (safe amount) */
-.sidebar {
-  margin-left: -10px !important;
-  position: relative;
-  z-index: 2;
-  background: #f6f0e6 !important;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow:
-    0 4px 10px rgba(0,0,0,0.08),
-    0 0 6px rgba(0,0,0,0.04);
+/* ============================================
+   WHITE PAPER CARD STYLE FOR MAIN CONTENT
+   ============================================ */
+.page__content,
+.page,
+.wrapper,
+.page__inner-wrap {
+  background: rgba(255, 255, 255, 0.92) !important;
+  padding: 2rem !important;
+  border-radius: 12px !important;
+
+  /* subtle paper/card shadow */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+
+  /* card border for realism */
+  border: 1px solid rgba(0, 0, 0, 0.07) !important;
 }
 
-/* Very subtle paper grain overlay */
-.sidebar::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background: url('/assets/images/wrinkled-brown-paper.jpg'); /* optional */
-  opacity: 0.12;
-  mix-blend-mode: multiply;
-  border-radius: inherit;
+/* Ensure spacing around the card */
+.wrapper {
+  padding-top: 2rem !important;
+  padding-bottom: 2rem !important;
 }
+
+/* Sidebar also gets the card look */
+.sidebar {
+  background: rgba(246, 242, 238, 0.9) !important;
+  border-radius: 10px !important;
+  padding: 1.5rem !important;
+  box-shadow: 0 3px 9px rgba(0,0,0,0.12) !important;
+}
+
+/* Remove background from the *overall* page */
+body,
+html {
+  background-color: transparent !important;
+}
+
+
