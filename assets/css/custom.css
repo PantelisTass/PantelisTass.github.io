@@ -1,6 +1,6 @@
 /* Move sidebar further left */
 .sidebar {
-  margin-left: -40px !important;   /* Move card left */
+  margin-left: -20px !important;   /* Move card left */
   position: relative;
   z-index: 10;
 }
