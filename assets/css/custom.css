@@ -1,59 +1,37 @@
-/* ===============================
-   GLOBAL BACKGROUND TEXTURE
-   =============================== */
-html {
-  background-image: url('{{ "/assets/images/wrinkled-brown-paper.jpg" | relative_url }}');
-  background-repeat: repeat;
-  background-size: cover;
-  background-attachment: scroll;
-  background-color: #f2e9d8; /* fallback color similar to paper */
-}
-
-/* ===============================
-   MAKE MAIN WRAPPERS TRANSPARENT
-   (they normally cover the texture)
-   =============================== */
-body,
+/* ============================================
+   WHITE PAPER CARD STYLE FOR MAIN CONTENT
+   ============================================ */
+.page__content,
 .page,
 .wrapper,
-.page__content,
-.sidebar,
-.masthead,
-.masthead__inner-wrap,
-.footer,
-.page__inner-wrap,
-.content {
-  background: transparent !important;
+.page__inner-wrap {
+  background: rgba(255, 255, 255, 0.92) !important;
+  padding: 2rem !important;
+  border-radius: 12px !important;
+
+  /* subtle paper/card shadow */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+
+  /* card border for realism */
+  border: 1px solid rgba(0, 0, 0, 0.07) !important;
 }
 
-/* ===============================
-   OPTIONAL: Card-like posts
-   If you want posts to still have
-   white readable background:
-   (Uncomment to enable)
-   =============================== */
-/*
-.page__content {
-  background: rgba(255, 255, 255, 0.85) !important;
-  padding: 2rem;
-  border-radius: 8px;
-}
-*/
-
-/* ===============================
-   OPTIONAL: Remove drop shadows
-   That appear when backgrounds go transparent
-   =============================== */
-.page__content,
-.sidebar,
+/* Ensure spacing around the card */
 .wrapper {
-  box-shadow: none !important;
+  padding-top: 2rem !important;
+  padding-bottom: 2rem !important;
 }
 
-/* ===============================
-   OPTIONAL: Improve text contrast
-   =============================== */
-body {
-  color: #222;
+/* Sidebar also gets the card look */
+.sidebar {
+  background: rgba(255, 255, 255, 0.90) !important;
+  border-radius: 10px !important;
+  padding: 1.5rem !important;
+  box-shadow: 0 3px 9px rgba(0,0,0,0.12) !important;
 }
 
+/* Remove background from the *overall* page */
+body,
+html {
+  background-color: transparent !important;
+}
