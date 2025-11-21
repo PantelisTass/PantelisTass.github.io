@@ -1,14 +1,59 @@
+/* ===============================
+   GLOBAL BACKGROUND TEXTURE
+   =============================== */
 html {
   background-image: url('{{ "/assets/images/wrinkled-brown-paper.jpg" | relative_url }}');
   background-repeat: repeat;
   background-size: auto;
+  background-attachment: scroll;
+  background-color: #f2e9d8; /* fallback color similar to paper */
 }
 
-.page__content,
-.wrapper,
-.masthead,
+/* ===============================
+   MAKE MAIN WRAPPERS TRANSPARENT
+   (they normally cover the texture)
+   =============================== */
+body,
 .page,
-.content,
-.sidebar {
+.wrapper,
+.page__content,
+.sidebar,
+.masthead,
+.masthead__inner-wrap,
+.footer,
+.page__inner-wrap,
+.content {
   background: transparent !important;
 }
+
+/* ===============================
+   OPTIONAL: Card-like posts
+   If you want posts to still have
+   white readable background:
+   (Uncomment to enable)
+   =============================== */
+/*
+.page__content {
+  background: rgba(255, 255, 255, 0.85) !important;
+  padding: 2rem;
+  border-radius: 8px;
+}
+*/
+
+/* ===============================
+   OPTIONAL: Remove drop shadows
+   That appear when backgrounds go transparent
+   =============================== */
+.page__content,
+.sidebar,
+.wrapper {
+  box-shadow: none !important;
+}
+
+/* ===============================
+   OPTIONAL: Improve text contrast
+   =============================== */
+body {
+  color: #222;
+}
+
