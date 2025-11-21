@@ -13,7 +13,7 @@
     src:url('../fonts/academicons.eot') format('embedded-opentype'),
         url('../fonts/academicons.ttf') format('truetype'),
         url('../fonts/academicons.woff') format('woff'),
-        url('../fonts/academicons.svg') format('svg');
+        url('../fonts/academicons_with_symbols.svg') format('svg');
 }
 .ai {
   font-family: 'Academicons';
@@ -440,6 +440,10 @@
 .ai-stackoverflow-square:before {
   content: "\e921";
 }
+.ai-mathsexchange:before {
+  content: "\f447";
+}
+
 .ai-viaf:before {
   content: "\e933";
 }
@@ -567,5 +571,5 @@ border-radius: .1em;
   font-size: 2em;
 }
 .ai-inverse {
-  color: #fff;
+  color: #23e715;
 }

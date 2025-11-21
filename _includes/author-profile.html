@@ -77,8 +77,12 @@
         <li><a href="https://kaggle.com/{{ author.kaggle }}"><i class="fab fa-fw fa-kaggle icon-pad-right" aria-hidden="true"></i>Kaggle</a></li>
       {% endif %}      
       {% if author.stackoverflow %}
-        <li><a href="https://www.stackoverflow.com/users/{{ author.stackoverflow }}"><i class="fab fa-fw fa-stack-overflow icon-pad-right" aria-hidden="true"></i>Stackoverflow</a></li>
-      {% endif %}      
+        <li><a href="{{ author.stackoverflow }}"><i class="fab fa-fw fa-stack-overflow icon-pad-right" aria-hidden="true"></i>Stackoverflow</a></li>
+      {% endif %}    
+      {% if author.mathsexchange %}
+        <li><a href="{{ author.mathsexchange }}"><i class="fab fa-fw fa-maths-exchange icon-pad-right" aria-hidden="true"></i>Maths StackExchange</a></li>
+      {% endif %}
+
 
       <!-- Font Awesome icons / Social media -->
       {% if author.bluesky %}
