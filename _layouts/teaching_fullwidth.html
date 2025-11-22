@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+{% include base_path %}
+
+<div class="teaching-container">
+  {% assign courses = site.teaching | sort: "date" | reverse %}
+  {% for course in courses %}
+    <div class="teaching-card">
+      <h2>{{ course.title }}</h2>
+      <p><strong>Venue:</strong> {{ course.venue }} | <strong>Date:</strong> {{ course.date | date: "%Y-%m-%d" }}</p>
+      <p>{{ course.excerpt }}</p>
+
+      {% if course.syllabus %}
+        {% for section in course.syllabus %}
+          <h3>{{ section.title }}</h3>
+          <ul>
+            {% for topic in section.topics %}
+              <li>{{ topic }}</li>
+            {% endfor %}
+          </ul>
+        {% endfor %}
+      {% endif %}
+
+      {% if course.materials %}
+        <div class="teach-links">
+          {% for item in course.materials %}
+            <div class="material-link">
+              <a href="{{ item.file | relative_url }}">{{ item.title }}</a>
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  {% endfor %}
+</div>
+
+

@@ -143,3 +143,62 @@ html {
 .pub-links a:hover {
   background: #eaeaea;
 }
+
+.teaching-container {
+  max-width: 900px;      /* same as conferences */
+  margin: 0 auto;        /* center horizontally */
+  padding: 40px 20px;    /* top/bottom and side padding */
+}
+
+.teaching-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px 30px;
+  margin-bottom: 40px;   /* spacing between cards */
+  box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+  border: 1px solid #e0e0e0;
+}
+
+.teaching-card h2 {
+  margin-bottom: 8px;
+}
+
+.teaching-card h3 {
+  margin-top: 20px;
+  font-size: 1.1rem;
+}
+
+.teaching-card ul {
+  margin-left: 20px;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.teaching-card li {
+  margin-bottom: 6px;
+}
+
+.teach-links .material-link {
+  margin-bottom: 8px;
+}
+
+.teach-links a {
+  display: inline-block;
+  font-size: 0.85rem;
+  padding: 6px 14px;
+  border-radius: 6px;
+  background: #f5f5f5;
+  margin-right: 10px;
+  border: 1px solid #ddd;
+  text-decoration: none;
+  color: #333;
+}
+
+.teach-links a:hover {
+  background: #eaeaea;
+}
+
+
+
+
+

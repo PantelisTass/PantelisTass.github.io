@@ -1,5 +1,5 @@
 ---
-layout: archive
+layout: teaching_fullwidth
 title: "Teaching"
 permalink: /teaching/
 author_profile: true
