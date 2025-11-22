@@ -79,11 +79,8 @@ html {
   margin-top: 8px;
 }
 
-/* Container for all publications */
-.publications-container {
-  max-width: 1000px;      /* wider content area */
-  margin: 0 auto;
-  padding: 40px 20px;
+.publication-page {
+  font-style: normal !important;
 }
 
 /* Individual publication card */
@@ -144,10 +141,8 @@ html {
   background: #eaeaea;
 }
 
-.teaching-container {
-  max-width: 900px;      /* same as conferences */
-  margin: 0 auto;        /* center horizontally */
-  padding: 40px 20px;    /* top/bottom and side padding */
+.teaching-page {
+  font-style: normal !important;
 }
 
 .teaching-card {
@@ -197,6 +192,9 @@ html {
 .teach-links a:hover {
   background: #eaeaea;
 }
+
+
+
 
 
 
