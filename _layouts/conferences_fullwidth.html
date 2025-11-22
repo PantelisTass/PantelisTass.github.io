@@ -1,0 +1,50 @@
+---
+layout: default
+---
+<div id="main" role="main" style="max-width:none; padding:40px 20px;">
+
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">{{ page.title }}</h1>
+      {% if page.page_intro %}
+        <p class="page-intro">{{ page.page_intro }}</p>
+      {% endif %}
+    </header>
+
+    <div class="post-content">
+      <div class="conferences-container">
+        {% assign talks = site.conferences | sort: "date" | reverse %}
+        {% for talk in talks %}
+          <div class="conference-card">
+            <div class="conf-meta">
+              <span class="conf-year">{{ talk.date | date: "%Y" }}</span>
+              {% if talk.venue %}• <span class="conf-venue">{{ talk.venue }}</span>{% endif %}
+            </div>
+
+            <h2 class="conf-title">
+              {% if talk.permalink %}<a href="{{ talk.permalink }}">{{ talk.title }}</a>{% else %}{{ talk.title }}{% endif %}
+            </h2>
+
+            {% if talk.authors %}
+              <p class="conf-authors">{{ talk.authors }}</p>
+            {% endif %}
+
+            {% if talk.excerpt %}
+              <p class="conf-excerpt">{{ talk.excerpt }}</p>
+            {% endif %}
+
+            {% if talk.pdfs %}
+            <div class="conf-links">
+              {% for item in talk.pdfs %}
+                <div class="pdf-link">
+                  <a href="{{ item.file | relative_url }}">{{ item.title }}</a>
+                </div>
+              {% endfor %}
+            </div>
+          {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </article>
+</div>
