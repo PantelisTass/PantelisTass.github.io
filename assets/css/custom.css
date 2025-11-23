@@ -4,7 +4,7 @@
 .page {
   background: url('/assets/images/wrinkled-brown-paper.jpg') repeat;
   background-size: cover;
-  padding: 24px 30px !important;        /* desktop default */
+  padding: 3rem !important;        /* desktop default */
   border-radius: 12px !important;
 
   box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
