@@ -4,7 +4,7 @@
 .page{
   background: url('/assets/images/wrinkled-brown-paper.jpg') repeat; /* textured background */
   background-size: cover; /* or 'auto' to keep original tiling */
-  padding: 10rem !important;
+  padding: 2rem !important;
   border-radius: 12px !important;
 
   /* subtle paper/card shadow */
