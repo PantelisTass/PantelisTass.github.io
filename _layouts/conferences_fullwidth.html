@@ -22,7 +22,7 @@ layout: default
             </div>
 
             <h2 class="conf-title">
-              {% if talk.permalink %}<a href="{{ talk.permalink }}">{{ talk.title }}</a>{% else %}{{ talk.title }}{% endif %}
+              {{ talk.title }}
             </h2>
 
             {% if talk.authors %}
