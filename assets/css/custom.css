@@ -3,7 +3,6 @@
   display: flex;                   /* allow inner card to grow */
   flex-direction: column;
   border-radius: 12px;
-  min-height: 100vh;               /* always fill viewport height */
   padding: 2rem;
   background: url('/assets/images/wrinkled-brown-paper.jpg') repeat;
   background-size: cover;
@@ -41,8 +40,6 @@
     border-radius: 8px;
   }
 }
-
-
 
 /* Sidebar also gets the card look */
 .sidebar {
