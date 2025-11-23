@@ -19,5 +19,4 @@ materials:
     file: "/files/Fourier_Analysis_and_the_theory_of_distributions_Coursework_1__01862156_.pdf"
   - title: "Introduction to SDEs and Diffusion Processes (2022-2023) – Coursework 1"
     file: "/files/Introduction_To_SDEs_And_Diffusion_Processes_Coursework_1__01862156_.pdf"
-excerpt: "Collection of Imperial College undergraduate maths course notes 2020-2023."
 ---

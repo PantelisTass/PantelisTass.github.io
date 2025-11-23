@@ -17,5 +17,4 @@ materials:
     file: "/files/Distribution%20Theory.pdf"
   - title: "Concentration Inequalities"
     file: "/files/Concentration%20Inequalities.pdf"
-excerpt: "Collection of Part III Cambridge maths course notes for 2023-2024."
 ---
