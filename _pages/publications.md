@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: publications_clean
 title: Publications
 permalink: /publications/
 ---

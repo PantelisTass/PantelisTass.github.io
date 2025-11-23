@@ -1,39 +1,63 @@
 ---
 layout: default
 ---
+<div id="main" role="main" style="max-width:none; padding:40px 20px;">
 
-{% include base_path %}
-
-<div class="teaching-container">
-  {% assign courses = site.teaching | sort: "date" | reverse %}
-  {% for course in courses %}
-    <div class="teaching-card">
-      <h2>{{ course.title }}</h2>
-      <p><strong>Venue:</strong> {{ course.venue }} | <strong>Date:</strong> {{ course.date | date: "%Y-%m-%d" }}</p>
-      <p>{{ course.excerpt }}</p>
-
-      {% if course.syllabus %}
-        {% for section in course.syllabus %}
-          <h3>{{ section.title }}</h3>
-          <ul>
-            {% for topic in section.topics %}
-              <li>{{ topic }}</li>
-            {% endfor %}
-          </ul>
-        {% endfor %}
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">{{ page.title }}</h1>
+      {% if page.page_intro %}
+        <p class="page-intro">{{ page.page_intro }}</p>
       {% endif %}
+    </header>
 
-      {% if course.materials %}
-        <div class="teach-links">
-          {% for item in course.materials %}
-            <div class="material-link">
-              <a href="{{ item.file | relative_url }}">{{ item.title }}</a>
+    <div class="post-content">
+      <div class="projects-container"> <!-- reuse container styling -->
+        {% assign courses = site.teaching | sort: "date" | reverse %}
+        {% for course in courses %}
+          <div class="conference-card"> <!-- reuse conference-card styling -->
+            <div class="conf-meta">
+              <span class="conf-year">{{ course.date | date: "%Y" }}</span>
+              {% if course.venue %}• <span class="conf-venue">{{ course.venue }}</span>{% endif %}
             </div>
-          {% endfor %}
-        </div>
-      {% endif %}
+
+            <h2 class="conf-title">{{ course.title }}</h2>
+
+            {% if course.instructors %}
+              <p class="conf-authors">{{ course.instructors }}</p>
+            {% endif %}
+
+            {% if course.excerpt %}
+              <p class="conf-excerpt">{{ course.excerpt }}</p>
+            {% endif %}
+
+            {% if course.syllabus %}
+              {% for section in course.syllabus %}
+                <h3>{{ section.title }}</h3>
+                <ul>
+                  {% for topic in section.topics %}
+                    <li>{{ topic }}</li>
+                  {% endfor %}
+                </ul>
+              {% endfor %}
+            {% endif %}
+
+            {% if course.materials %}
+              <div class="teach-links">
+                {% for item in course.materials %}
+                  <div class="material-link">
+                    <a href="{{ item.file | relative_url }}">{{ item.title }}</a>
+                  </div>
+                {% endfor %}
+              </div>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
     </div>
-  {% endfor %}
+  </article>
 </div>
+
+
 
 

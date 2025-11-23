@@ -213,7 +213,7 @@ collections:
     permalink: /:collection/:path/
   projects:
     output: true
-    permalink: /:collection/:path/
+    permalink: /projects/:path/
   classes:
     output: true
     permalink: /:collection/:path/

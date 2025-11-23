@@ -1,88 +1,51 @@
 ---
 layout: default
-title: Publications
-permalink: /publications/
 ---
+<div id="main" role="main" style="max-width:none; padding:40px 20px;">
 
-{% if site.author.googlescholar %}
-<div class="wordwrap">
-  You can also find my articles on <a href="{{ site.author.googlescholar }}">my Google Scholar profile</a>.
-</div>
-{% endif %}
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">{{ page.title }}</h1>
+      {% if page.page_intro %}
+        <p class="page-intro">{{ page.page_intro }}</p>
+      {% endif %}
+    </header>
 
-{% include base_path %}
+    <div class="post-content">
+      <div class="publications-container">
+        {% assign pubs = site.publications | sort: "year" | reverse %}
+        {% for pub in pubs %}
+          <div class="conference-card"> <!-- reuse conference-card styling -->
+            <div class="conf-meta">
+              <span class="conf-year">{{ pub.year }}</span>
+              {% if pub.venue %}• <span class="conf-venue">{{ pub.venue }}</span>{% endif %}
+            </div>
 
-<div class="publications-container">
+            <h2 class="conf-title">{{ pub.title }}</h2>
 
-  <h1>Publications</h1>
-  {% for post in site.publications reversed %}
-    {% if post.type == 'publications' %}
-      <div class="publication-card">
-        <div class="pub-meta">
-          <span class="pub-year">{{ post.year }}</span>
-          {% if post.venue %}• <span class="pub-venue">{{ post.venue }}</span>{% endif %}
-        </div>
+            {% if pub.authors %}
+              <p class="conf-authors">{{ pub.authors }}</p>
+            {% endif %}
 
-        <h2 class="pub-title">
-          {% if post.paperurl %}
-            <a href="{{ post.paperurl }}">{{ post.title }}</a>
-          {% else %}
-            {{ post.title }}
-          {% endif %}
-        </h2>
+            {% if pub.excerpt %}
+              <p class="conf-excerpt">{{ pub.excerpt }}</p>
+            {% endif %}
 
-        {% if post.authors %}
-          <p class="pub-authors">{{ post.authors }}</p>
-        {% endif %}
-
-        {% if post.citation %}
-          <p class="pub-reference">{{ post.citation }}</p>
-        {% endif %}
-
-        <div class="pub-links">
-          {% if post.paperurl %}<a href="{{ post.paperurl }}">PDF</a>{% endif %}
-          {% if post.code %}<a href="{{ post.code }}">Code</a>{% endif %}
-          {% if post.doi %}<a href="https://doi.org/{{ post.doi }}">DOI</a>{% endif %}
-        </div>
-
+            <div class="conf-links">
+              {% if pub.pdf %}
+                <div class="pdf-link"><a href="{{ pub.pdf | relative_url }}">Download PDF</a></div>
+              {% endif %}
+              {% if pub.doi %}
+                <div class="pdf-link"><a href="https://doi.org/{{ pub.doi }}">DOI</a></div>
+              {% endif %}
+            </div>
+          </div>
+        {% endfor %}
       </div>
-    {% endif %}
-  {% endfor %}
-
-  <h1>Preprints</h1>
-  {% for post in site.publications reversed %}
-    {% if post.type == 'preprints' %}
-      <div class="publication-card">
-        <div class="pub-meta">
-          <span class="pub-year">{{ post.year }}</span>
-          {% if post.venue %}• <span class="pub-venue">{{ post.venue }}</span>{% endif %}
-        </div>
-
-        <h2 class="pub-title">
-          {% if post.paperurl %}
-            <a href="{{ post.paperurl }}">{{ post.title }}</a>
-          {% else %}
-            {{ post.title }}
-          {% endif %}
-        </h2>
-
-        {% if post.authors %}
-          <p class="pub-authors">{{ post.authors }}</p>
-        {% endif %}
-
-        {% if post.citation %}
-          <p class="pub-reference">{{ post.citation }}</p>
-        {% endif %}
-
-        <div class="pub-links">
-          {% if post.paperurl %}<a href="{{ post.paperurl }}">PDF</a>{% endif %}
-          {% if post.code %}<a href="{{ post.code }}">Code</a>{% endif %}
-          {% if post.doi %}<a href="https://doi.org/{{ post.doi }}">DOI</a>{% endif %}
-        </div>
-
-      </div>
-    {% endif %}
-  {% endfor %}
-
+    </div>
+  </article>
 </div>
+
+
+
 
