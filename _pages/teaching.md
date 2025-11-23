@@ -2,7 +2,7 @@
 layout: teaching_fullwidth
 title: "Teaching"
 permalink: /teaching/
-author_profile: true
+body_class: teaching-page
 ---
 
 {% include base_path %}

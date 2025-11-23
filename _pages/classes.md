@@ -2,6 +2,7 @@
 layout: classes_fullwidth
 title: "Course Notes & Classes"
 permalink: /classes/
+body_class: classes-page
 ---
 
 {% include base_path %}
