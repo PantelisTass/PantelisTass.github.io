@@ -1,6 +1,6 @@
 ---
 title: "The KPZ Fixed Point and the Directed Landscape"
-type: preprints
+type: preprint
 year: 2024
 venue: "arXiv"
 link: "https://arxiv.org/pdf/2409.14920"

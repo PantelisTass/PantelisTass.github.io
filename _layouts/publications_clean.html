@@ -1,51 +1,104 @@
 ---
 layout: default
 ---
-<div id="main" role="main" style="max-width:none; padding:40px 20px;">
 
+<div id="main" role="main" style="max-width:none; padding:40px 20px;">
   <article class="post">
     <header class="post-header">
-      <h1 class="post-title">{{ page.title }}</h1>
-      {% if page.page_intro %}
-        <p class="page-intro">{{ page.page_intro }}</p>
-      {% endif %}
     </header>
 
     <div class="post-content">
       <div class="publications-container">
-        {% assign pubs = site.publications | sort: "year" | reverse %}
-        {% for pub in pubs %}
-          <div class="conference-card"> <!-- reuse conference-card styling -->
-            <div class="conf-meta">
-              <span class="conf-year">{{ pub.year }}</span>
-              {% if pub.venue %}• <span class="conf-venue">{{ pub.venue }}</span>{% endif %}
-            </div>
 
-            <h2 class="conf-title">{{ pub.title }}</h2>
+        <!-- ========================= -->
+        <!--       PREPRINTS FIRST     -->
+        <!-- ========================= -->
 
-            {% if pub.authors %}
-              <p class="conf-authors">{{ pub.authors }}</p>
-            {% endif %}
+        <h1>Preprints</h1>
 
-            {% if pub.excerpt %}
-              <p class="conf-excerpt">{{ pub.excerpt }}</p>
-            {% endif %}
+        {% assign preprints = site.publications | where:"type","preprint" | sort:"year" | reverse %}
+        {% for post in preprints %}
+          <div class="publication-card">
 
-            <div class="conf-links">
-              {% if pub.pdf %}
-                <div class="pdf-link"><a href="{{ pub.pdf | relative_url }}">Download PDF</a></div>
-              {% endif %}
-              {% if pub.doi %}
-                <div class="pdf-link"><a href="https://doi.org/{{ pub.doi }}">DOI</a></div>
+            <div class="pub-meta">
+              <span class="pub-year">{{ post.year }}</span>
+              {% if post.venue %}
+                • <span class="pub-venue">{{ post.venue }}</span>
               {% endif %}
             </div>
+
+            <h2 class="pub-title">
+              {% if post.link %}
+                <a href="{{ post.link }}">{{ post.title }}</a>
+              {% else %}
+                {{ post.title }}
+              {% endif %}
+            </h2>
+
+            {% if post.authors %}
+              <p class="pub-authors">{{ post.authors }}</p>
+            {% endif %}
+
+            {% if post.excerpt %}
+              <p>{{ post.excerpt }}</p>
+            {% endif %}
+
+            <div class="pub-links">
+              {% if post.pdf %}<a href="{{ post.pdf | relative_url }}">PDF</a>{% endif %}
+              {% if post.code %}<a href="{{ post.code }}">Code</a>{% endif %}
+              {% if post.doi %}<a href="https://doi.org/{{ post.doi }}">DOI</a>{% endif %}
+            </div>
+
           </div>
         {% endfor %}
+
+
+        <!-- ========================= -->
+        <!--       PUBLICATIONS        -->
+        <!-- ========================= -->
+
+        <h1>Publications</h1>
+
+        {% assign pubs = site.publications | where:"type","publication" | sort:"year" | reverse %}
+        {% for post in pubs %}
+          <div class="publication-card">
+
+            <div class="pub-meta">
+              <span class="pub-year">{{ post.year }}</span>
+              {% if post.venue %}
+                • <span class="pub-venue">{{ post.venue }}</span>
+              {% endif %}
+            </div>
+
+            <h2 class="pub-title">
+              {% if post.link %}
+                <a href="{{ post.link }}">{{ post.title }}</a>
+              {% else %}
+                {{ post.title }}
+              {% endif %}
+            </h2>
+
+            {% if post.authors %}
+              <p class="pub-authors">{{ post.authors }}</p>
+            {% endif %}
+
+            {% if post.excerpt %}
+              <p>{{ post.excerpt }}</p>
+            {% endif %}
+
+            <div class="pub-links">
+              {% if post.pdf %}<a href="{{ post.pdf | relative_url }}">PDF</a>{% endif %}
+              {% if post.code %}<a href="{{ post.code }}">Code</a>{% endif %}
+              {% if post.doi %}<a href="https://doi.org/{{ post.doi }}">DOI</a>{% endif %}
+            </div>
+
+          </div>
+        {% endfor %}
+
       </div>
     </div>
   </article>
 </div>
-
 
 
 

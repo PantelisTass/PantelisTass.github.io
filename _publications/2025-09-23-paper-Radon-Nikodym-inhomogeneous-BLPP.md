@@ -1,6 +1,6 @@
 ---
 title: "Radon-Nikodym derivative of inhomogeneous Brownian last passage percolation"
-type: preprints
+type: preprint
 year: 2025
 venue: "arXiv"
 pdf: '/files/2509.19414v1.pdf'

@@ -2,8 +2,8 @@
 title: "Brownian Motion and the Stochastic Behaviour of Stocks"
 authors: "Pantelis Tassopoulos, Yorgos Protonotarios"
 year: 2021
+type: publication
 venue: "Journal of Mathematical Finance 12.1 (2021): 138-149."
-type: publications
 doi:  10.48550/arXiv.2110.12001
 link: https://www.scirp.org/pdf/jmf_2022021415091864.pdf
 reference: "Tassopoulos, Pantelis, and Protonotarios, Yorgos. Brownian Motion & the Stochastic Behavior of Stocks. Journal of Mathematical Finance 12.1 (2021): 138-149."

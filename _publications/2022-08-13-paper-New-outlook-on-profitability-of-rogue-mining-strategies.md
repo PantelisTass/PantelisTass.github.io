@@ -2,7 +2,7 @@
 title: "New outlook on profitability of rogue mining strategies"
 authors: "Pantelis Tassopoulos, Yorgos Protonotarios"
 year: 2022
-type: preprints
+type: preprint
 venue: "arXiv"
 pdf: /files/New outlook on profitability of rogue mining strategies.pdf
 link: https://arxiv.org/abs/2208.09482v1

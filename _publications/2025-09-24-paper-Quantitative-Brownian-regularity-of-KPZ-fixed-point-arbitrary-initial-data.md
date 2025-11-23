@@ -1,6 +1,6 @@
 ---
 title: "Quantitative Brownian regularity of the KPZ fixed point with arbitrary initial data"
-type: preprints
+type: preprint
 year: 2025
 venue: "arXiv"
 pdf: '/files/2509.19415v1.pdf'
