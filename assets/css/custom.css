@@ -248,3 +248,40 @@ html {
   border: 1px solid #e0e0e0;
 }
 
+/* ========================
+   CLASSES PAGE STYLING
+   ======================== */
+
+/* Each section card */
+.classes-container h1 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.classes-container ul {
+  background: #fff;
+  padding: 20px 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+  border: 1px solid #e0e0e0;
+  list-style: disc;
+  margin-bottom: 40px;
+}
+
+.classes-container li {
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.classes-container a {
+  text-decoration: none;
+  border-bottom: 1px solid #ccc;
+}
+
+.classes-container a:hover {
+  border-bottom-color: black;
+}
+
+
