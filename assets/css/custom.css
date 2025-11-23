@@ -1,61 +1,48 @@
-/* ============================================
-   WHITE PAPER CARD STYLE FOR MAIN CONTENT
-   ============================================ */
+/* OUTER PAGE – full viewport background */
 .page {
+  display: flex;                   /* allow inner card to grow */
+  flex-direction: column;
+  border-radius: 12px;
+  min-height: 100vh;               /* always fill viewport height */
+  padding: 2rem;
   background: url('/assets/images/wrinkled-brown-paper.jpg') repeat;
   background-size: cover;
-  padding: 3rem !important;        /* desktop default */
-  border-radius: 12px !important;
-
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
-  border: 1px solid rgba(0, 0, 0, 0.07) !important;
-
-  color: #333;               /* FIX for mobile */
-  box-sizing: border-box;          /* ensures padding fits screen */
+  box-sizing: border-box;
 }
 
-/* Mobile fixes */
+/* INNER CARD – soft white paper */
+.page__inner-wrap {
+  background: rgba(246, 242, 238, 0.95);
+  border-radius: 12px;
+  padding: 2rem;
+  margin: auto 0;                  /* vertically center on tall screens */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  box-sizing: border-box;
+  max-width: 1200px;               /* optional, keeps content readable */
+  width: 100%;
+}
+
+/* WRAPPER SPACING */
+.wrapper {
+  flex: 1;                         /* fill remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;          /* vertical centering */
+  padding: 2rem 0;
+}
+
+/* MOBILE */
 @media (max-width: 600px) {
   .page {
-    padding: 1rem !important;      /* softer padding on small screens */
-    border-radius: 8px !important;
-    background-size: contain;      /* prevents zoomed-in paper texture */
+    padding: 1rem;
+  }
+  .page__inner-wrap {
+    padding: 1rem;
+    border-radius: 8px;
   }
 }
 
-.page__inner-wrap {
-  background: rgba(246, 242, 238, 0.9); /* textured background */
-  background-size: cover; /* or 'auto' to keep original tiling */
-  padding: 24px 30px !important;
-  border-radius: 12px !important;
 
-  /* subtle paper/card shadow */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
-
-  /* card border for realism */
-  border: 1px solid rgba(0, 0, 0, 0.07) !important;
-  color: #333; /* ensure text is readable */
-}
-
-/* Optional: slightly translucent overlay to soften text readability */
-.page__content::before,
-.page::before,
-.wrapper::before,
-.page__inner-wrap::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(255, 255, 255, 0.7); /* soft white overlay */
-  border-radius: 12px;
-  z-index: -1; /* behind content */
-}
-
-/* Ensure spacing around the card */
-.wrapper {
-  padding-top: 2rem !important;
-  padding-bottom: 2rem !important;
-}
 
 /* Sidebar also gets the card look */
 .sidebar {
