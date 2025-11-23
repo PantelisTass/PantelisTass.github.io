@@ -9,5 +9,5 @@ materials:
     file: "/files/Random_Matrix_Theory_Lecture_Reading_Group_Cam_2024.pdf"
   - title: "List of all classes with syllabi taken during my undergraduate studies at Imperial and masters studies at Cambridge (2020-2024)"
     file: /files/Advanced Mathematics Courses List.pdf
-excerpt: "Miscellaneous Cambridge course notes and talks."
+excerpt: "Miscellaneous notes from courses and talks."
 ---
