@@ -4,10 +4,6 @@ title: Publications
 permalink: /publications/
 ---
 
-# Publications
-
-This section highlights selected publications that reflect my research interests and contributions. The listed works include peer-reviewed journal articles, conference papers, and other scholarly outputs that demonstrate the scope and impact of my work.
-
 {% if site.author.googlescholar %}
 <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
 {% endif %}
