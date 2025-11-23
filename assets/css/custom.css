@@ -1,18 +1,26 @@
 /* ============================================
    WHITE PAPER CARD STYLE FOR MAIN CONTENT
    ============================================ */
-.page{
-  background: url('/assets/images/wrinkled-brown-paper.jpg') repeat; /* textured background */
-  background-size: cover; /* or 'auto' to keep original tiling */
-  padding: 24px 30px !important;
+.page {
+  background: url('/assets/images/wrinkled-brown-paper.jpg') repeat;
+  background-size: cover;
+  padding: 24px 30px !important;        /* desktop default */
   border-radius: 12px !important;
 
-  /* subtle paper/card shadow */
   box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
-
-  /* card border for realism */
   border: 1px solid rgba(0, 0, 0, 0.07) !important;
-  color: #333; /* ensure text is readable */
+
+  color: #333;               /* FIX for mobile */
+  box-sizing: border-box;          /* ensures padding fits screen */
+}
+
+/* Mobile fixes */
+@media (max-width: 600px) {
+  .page {
+    padding: 1rem !important;      /* softer padding on small screens */
+    border-radius: 8px !important;
+    background-size: contain;      /* prevents zoomed-in paper texture */
+  }
 }
 
 .page__inner-wrap {
