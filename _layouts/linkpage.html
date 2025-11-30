@@ -1,0 +1,86 @@
+---
+layout: compress
+---
+
+{% include base_path %}
+
+<!doctype html>
+<html lang="{{ site.locale | slice: 0,2 }}" class="no-js">
+  <head>
+    {% include head.html %}
+    {% include head/custom.html %}
+    <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
+    <script type="text/javascript" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+  </head>
+
+  <body class="{{ page.body_class }}">
+    {% include browser-upgrade.html %}
+    {% include masthead.html %}
+
+    <main role="main" class="page-content">
+      <div class="wrapper">
+
+        <h1>{{ page.title }}</h1>
+        {% if page.description %}
+          <p>{{ page.description }}</p>
+        {% endif %}
+
+      {% if page.image_link %}
+        <figure style="margin: 20px 0; text-align: center;">
+          <a href="{{ page.image_url }}">
+            <img src="{{ page.image_link | relative_url }}"
+                alt="{{ page.title }}"
+                style="width: 20%; max-width: 900px; height: auto;">
+          </a>
+
+          {% if page.caption %}
+            <figcaption style="margin-top: 10px; color: #666; font-size: 0.9em;">
+              {{ page.caption }}
+            </figcaption>
+          {% endif %}
+        </figure>
+      {% endif %}
+
+        {% if page.target %}
+        <p>
+          <strong>Link:</strong>  
+          <a href="{{ page.target }}">{{ page.target }}</a>
+        </p>
+        {% endif %}
+
+
+        {% if page.image %}
+        <figure style="margin: 20px 0; text-align: center;">
+            <img src="{{ page.image | relative_url }}" 
+                alt="{{ page.title }}"
+                style="max-width: 150%; height: auto;">
+
+            {% if page.caption %}
+            <figcaption style="margin-top: 10px; color: #666; font-size: 0.9em;">
+                {{ page.caption }}
+            </figcaption>
+            {% endif %}
+        </figure>
+        {% endif %}
+
+         {% if page.extra_html %}
+      {{ page.extra_html | markdownify }}
+      {% endif %}
+      </div>
+
+
+    </main>
+
+
+    <div class="page__footer">
+      <footer>
+        {% include footer/custom.html %}
+        {% include footer.html %}
+      </footer>
+    </div>
+
+    {% include scripts.html %}
+  </body>
+</html>

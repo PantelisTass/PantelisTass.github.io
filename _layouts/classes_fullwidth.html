@@ -13,7 +13,7 @@ layout: default
 
     <div class="post-content">
       <div class="classes-container"> <!-- reuse container styling -->
-        {% assign notes = site.classes | sort: "date" | reverse %}
+        {% assign notes = site.classes | sort: "year" | reverse %}
         {% for note in notes %}
           <div class="conference-card"> <!-- reuse conference-card styling -->
             <div class="conf-meta">

@@ -1,3 +1,4 @@
+
 /* OUTER PAGE – full viewport background */
 .page {
   display: flex;                   /* allow inner card to grow */
@@ -47,10 +48,6 @@
   border-radius: 10px !important;
   padding: 1.5rem !important;
   box-shadow: 0 3px 9px rgba(0,0,0,0.12) !important;
-}
-
-.conference-page {
-  font-style: normal !important;
 }
 
 /* Each PDF link on its own line */
@@ -192,6 +189,12 @@
   padding-bottom: 40px;
 }
 
+.about-page {
+  font-style: normal !important;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
 .conference-card {
   background: #fff;
   border-radius: 12px;
@@ -293,7 +296,7 @@
 
 body.classes-page {
   min-height: 100%; /* cover the full viewport height */
-  background-image: url('/assets/images/graph paper texture.jpg');
+  background-image: url('/assets/images/penrose-tiling-1.png');
   background-repeat: repeat;          /* tile */
   background-size: auto;              /* default tiling */
   background-attachment: fixed;       /* optional */
@@ -308,13 +311,35 @@ body.classes-page {
 
 body.teaching-page {
   /* Background layers: color first, then ink blot image */
-  background-image: url('/assets/images/notebook 2.png'); /* corner decoration */
+  background-image: url('/assets/images/tiling.png'); /* corner decoration */
   background-size: cover;              /* default tiling */
   background-attachment: fixed;       /* optional */
   background-color: #fefefe;          /* fallback */
   margin: 0;
   padding: 0;
 }
+
+/* Darker blue links */
+a {
+  color: #003366; /* change to any dark blue hex */
+  text-decoration: underline; /* optional: keep underline */
+}
+
+/* Optional: darker on hover */
+a:hover {
+  color: #001a33;
+}
+
+body.conference-page {
+  background-image: url('/assets/images/square-painting.png');
+  background-repeat: repeat;
+  background-size: 150px 150px;
+  background-attachment: fixed;
+}
+
+
+
+
 
 
 

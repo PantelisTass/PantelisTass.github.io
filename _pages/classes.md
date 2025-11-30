@@ -7,7 +7,9 @@ body_class: classes-page
 
 {% include base_path %}
 
-{% for post in site.classes reversed %}
+{% assign sorted_classes = site.classes | sort: "year" | reverse %}
+
+{% for post in sorted_classes %}
   {% include archive-single.html %}
 {% endfor %}
 
