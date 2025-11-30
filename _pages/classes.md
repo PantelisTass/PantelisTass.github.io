@@ -3,6 +3,7 @@ layout: classes_fullwidth
 title: "Course Notes & Classes"
 permalink: /classes/
 body_class: classes-page
+descriotion: A collection of some of my notes, coursework, or projects I have written up.
 ---
 
 {% include base_path %}

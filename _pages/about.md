@@ -5,6 +5,7 @@ redirect_from:
   - /about/
   - /about.html
 body_class: about-page
+description: I share my background and general information information about me.
 ---
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
