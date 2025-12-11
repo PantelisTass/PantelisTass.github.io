@@ -1,18 +1,24 @@
 
 /* OUTER PAGE – full viewport background */
 .page {
-  display: flex;                   /* allow inner card to grow */
+  display: flex;
   flex-direction: column;
   border-radius: 12px;
   padding: 2rem;
-  background: url('/assets/images/wrinkled-brown-paper.jpg') repeat;
-  background-size: cover;
   box-sizing: border-box;
+
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.5), /* white overlay with 50% opacity */
+      rgba(255, 255, 255, 0.5)
+    ),
+    url('/assets/images/abstract-art.jpg') repeat;
+  background-size: cover;
 }
+
 
 /* INNER CARD – soft white paper */
 .page__inner-wrap {
-  background: rgba(246, 242, 238, 0.95);
+  background: rgb(255, 255, 255, 0.85); /* semi-transparent white */
   border-radius: 12px;
   padding: 2rem;
   margin: auto 0;                  /* vertically center on tall screens */
