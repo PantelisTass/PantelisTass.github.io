@@ -20,7 +20,7 @@ Particularly, one can take many discrete models (e.g. sticky tetris) and associa
 (with scaling \\(\varepsilon h(\varepsilon^{-3} t,\varepsilon^{-2} x)-C_{\varepsilon}t\\) where \\(h(t,x)\\) is the original height function, i.e. zooming out as
 \\(\varepsilon\to 0\\)) which are conjectured to converge a universal Markov process, namely the KPZ fixed point. This convergence has been proved for a limited number of models so far, (sticky tetris not being one of them!) and mathematicians are actively working on this.
 
-My interests more generally are in Random Geometry, Stochastic analysis and Stochastic Partial Differential Equations.
+My interests more generally are in Stochastic analysis, Stochastic Partial Differential Equations, Random Geometry and Statistical Mechanics.
 
 Mentors that have guided me through my academic journey so far inlude: Dr. Sourav Sarkar, Dr. Paul Russell, Professor Perla Sousi, Professor Gregorios Pavliotis, Dr. Ajay Chandra, Sr. Pierre-Francois Rodriguez, Professor Igor Krasovsky and Professor Jonathan Mestel.
 
