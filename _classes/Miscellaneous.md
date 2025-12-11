@@ -5,6 +5,10 @@ year: 2024
 materials:
   - title: "Notes on the Brownian snake and superprocesses (2025)"
     file: "/materials/Brownian snake"
+  - title: "Notes on random polymers (2025)"
+    file: "https://pantelistassopoulos.com/conferences/"
+  - title: "Notes on random planar maps (2025)"
+    file: "https://pantelistassopoulos.com/conferences/"
   - title: "Cambridge probability reading group talk on Random matrix theory (2024)"
     file: "/materials/rmt"
   - title: "Mathematics of machine learning notes (2023)"
