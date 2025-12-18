@@ -8,18 +8,34 @@ permalink: /talkmap.html
 
 <p>Interactive map of all the talks I’ve given.</p>
 
+<!-- Map container -->
 <div id="map" style="width:100%; height:600px;"></div>
 
+<!-- Leaflet CSS -->
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+<!-- Optional: fix Leaflet container CSS -->
+<style>
+  #map { height: 600px !important; }
+</style>
+
+<!-- Leaflet JS -->
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
+{% raw %}
 <script>
+  // Initialize map
   var map = L.map('map').setView([20, 0], 2); // global view
 
+  // OpenStreetMap tiles
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© OpenStreetMap contributors'
   }).addTo(map);
 
+  // Test marker to verify map loads
+  L.marker([0, 0]).addTo(map).bindPopup("Test marker").openPopup();
+
+  // Add markers from site.talks
   {% for talk in site.talks %}
     {% if talk.latitude and talk.longitude %}
       L.marker([{{ talk.latitude }}, {{ talk.longitude }}])
@@ -28,4 +44,6 @@ permalink: /talkmap.html
     {% endif %}
   {% endfor %}
 </script>
+{% endraw %}
+
 
