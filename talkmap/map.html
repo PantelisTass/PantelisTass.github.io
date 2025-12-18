@@ -6,40 +6,31 @@ permalink: /talkmap.html
 
 <h1>{{ page.title }}</h1>
 <p>Interactive map of all the talks I’ve given.</p>
-
-<!-- Map container -->
+m
 <div id="map" style="width:100%; height:600px;"></div>
 
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-  var map = L.map('map').setView([20,0],2);
+  try {
+    // Initialize map
+    var map = L.map('map').setView([20,0],2);
 
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '© OpenStreetMap contributors'
-  }).addTo(map);
+    // Add tiles
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
 
-  // Load talks from JSON
-  fetch('/_data/talks.json')
-    .then(res => res.json())
-    .then(talks => {
-      var markers = [];
-      talks.forEach(t => {
-        if (t.lat && t.lng) {
-          var m = L.marker([t.lat, t.lng]).addTo(map)
-            .bindPopup("<strong>"+t.title+"</strong><br>"+t.venue);
-          markers.push([t.lat, t.lng]);
-        }
-      });
-      if (markers.length > 0) {
-        map.fitBounds(markers);
-      }
-    })
-    .catch(err => console.error("Failed to load talks:", err));
+    // Add a single test marker
+    L.marker([0,0]).addTo(map).bindPopup("Map is working!").openPopup();
+  } catch(e) {
+    console.error("Leaflet map failed:", e);
+  }
 });
 </script>
+
 
 
 
