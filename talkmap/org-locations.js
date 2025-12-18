@@ -1,8 +1,8 @@
 var addressPoints = [
   [
-    "Berkeley CA, USA",
-    37.8708393,
-    -122.2728638
+    "National Technical University, Athens, Greece",
+    37.9838
+    23.7275
   ],
   [
     "London, UK",

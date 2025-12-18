@@ -1,9 +1,30 @@
 ---
-layout: archive
+layout: default
 title: "Talk map"
 permalink: /talkmap.html
 author_profile: true
 ---
 
-<p>This map is generated from a Jupyter Notebook file in <a href="https://github.com/academicpages/academicpages.github.io/blob/master/_talks/talkmap.ipynb">/_talks/talkmap.ipynb</a>, which mines the location fields in the .md files in _talks/.</p>
-<iframe src="/talkmap/map.html" height="700" width="850" style="border:none;"></iframe>
+<h1>{{ page.title }}</h1>
+
+<p>Interactive map of all the talks I’ve given.</p>
+<div id="map" style="width:100%; height:600px;"></div>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script>
+  var map = L.map('map').setView([20, 0], 2); // global view
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap contributors'
+  }).addTo(map);
+
+  {% for talk in site.talks %}
+    {% if talk.latitude and talk.longitude %}
+      L.marker([{{ talk.latitude }}, {{ talk.longitude }}])
+        .addTo(map)
+        .bindPopup("<strong>{{ talk.title | escape }}</strong><br>{{ talk.venue | escape }}");
+    {% endif %}
+  {% endfor %}
+</script>

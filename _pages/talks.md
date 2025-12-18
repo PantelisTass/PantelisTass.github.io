@@ -1,9 +1,12 @@
 ---
-layout: archive
-title: "Talks and presentations"
+layout: talks_fullwidth
+title: "Talks"
 permalink: /talks/
-author_profile: true
+body_class: talks-page
+description: A list of talks I have given at conferences and beyond
 ---
+<p>talkmap_link = {{ site.talkmap_link }}</p>
+<p>number of talks = {{ site.talks | size }}</p>
 
 {% if site.talkmap_link == true %}
 

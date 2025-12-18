@@ -1,0 +1,69 @@
+---
+layout: default
+---
+<div id="main" role="main" style="max-width:none; padding:40px 20px;">
+
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">{{ page.title }}</h1>
+
+      {% if page.page_intro %}
+        <p class="page-intro">{{ page.page_intro }}</p>
+      {% endif %}
+
+      {% if site.talkmap_link %}
+        <p style="text-decoration:underline;">
+          <a href="{{ '/talkmap.html' | relative_url }}">
+            See a map of all the places I've given a talk!
+          </a>
+        </p>
+      {% endif %}
+    </header>
+
+    <div class="post-content">
+      <div class="classes-container">
+
+        {% assign talks = site.talks | sort: "year" | reverse %}
+
+        {% for talk in talks %}
+          <div class="conference-card">
+            <div class="conf-meta">
+
+              {% if talk.year %}
+                <span class="conf-year">{{ talk.year }}</span>
+              {% elsif talk.date %}
+                <span class="conf-year">{{ talk.date | date: "%Y" }}</span>
+              {% endif %}
+
+              {% if talk.venue %}
+                • <span class="conf-venue">{{ talk.venue }}</span>
+              {% endif %}
+            </div>
+
+            <h2 class="conf-title">{{ talk.title }}</h2>
+
+            {% if talk.excerpt %}
+              <p class="conf-excerpt">{{ talk.excerpt }}</p>
+            {% endif %}
+
+            {% if talk.materials %}
+              <div class="conf-links">
+                {% for item in talk.materials %}
+                  <div class="pdf-link">
+                    <a href="{{ item.file | relative_url }}">
+                      {{ item.title }}
+                    </a>
+                  </div>
+                {% endfor %}
+              </div>
+            {% endif %}
+
+          </div>
+        {% endfor %}
+
+      </div>
+    </div>
+  </article>
+</div>
+
+
