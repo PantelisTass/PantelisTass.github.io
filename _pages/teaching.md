@@ -1,5 +1,5 @@
 ---
-layout: conferences_fullwifth
+layout: teaching_fullwidth
 title: "Teaching"
 permalink: /teaching/
 body_class: teaching-page
