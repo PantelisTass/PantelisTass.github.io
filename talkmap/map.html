@@ -10,53 +10,38 @@ permalink: /talkmap.html
 <!-- Map container -->
 <div id="map" style="width:100%; height:600px;"></div>
 
-<!-- Leaflet CSS (HTTPS) -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-
-<!-- Optional inline CSS to enforce height -->
-<style>
-  #map { height: 600px !important; width: 100% !important; }
-</style>
-
-<!-- Leaflet JS (HTTPS) -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
-{% raw %}
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-  // Initialize map
-  var map = L.map('map').setView([20, 0], 2); // Global view
+  var map = L.map('map').setView([20,0],2);
 
-  // Add HTTPS-hosted OpenStreetMap tiles
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© OpenStreetMap contributors'
   }).addTo(map);
 
-  // Add a test marker to ensure the map loads
-  L.marker([0, 0]).addTo(map).bindPopup("Test marker").openPopup();
-
-  // Add markers from site.talks
-  {% for talk in site.talks %}
-    {% if talk.latitude and talk.longitude %}
-      L.marker([{{ talk.latitude }}, {{ talk.longitude }}])
-        .addTo(map)
-        .bindPopup("<strong>{{ talk.title | escape }}</strong><br>{{ talk.venue | escape }}");
-    {% endif %}
-  {% endfor %}
-
-  // Optional: fit map bounds to all markers
-  var markers = [];
-  {% for talk in site.talks %}
-    {% if talk.latitude and talk.longitude %}
-      markers.push([{{ talk.latitude }}, {{ talk.longitude }}]);
-    {% endif %}
-  {% endfor %}
-  if (markers.length > 0) {
-    map.fitBounds(markers);
-  }
+  // Load talks from JSON
+  fetch('/_data/talks.json')
+    .then(res => res.json())
+    .then(talks => {
+      var markers = [];
+      talks.forEach(t => {
+        if (t.lat && t.lng) {
+          var m = L.marker([t.lat, t.lng]).addTo(map)
+            .bindPopup("<strong>"+t.title+"</strong><br>"+t.venue);
+          markers.push([t.lat, t.lng]);
+        }
+      });
+      if (markers.length > 0) {
+        map.fitBounds(markers);
+      }
+    })
+    .catch(err => console.error("Failed to load talks:", err));
 });
 </script>
-{% endraw %}
+
+
 
 
 
