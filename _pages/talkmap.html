@@ -2,55 +2,58 @@
 layout: default
 title: "Talk Map"
 permalink: /talkmap.html
-leaflet: true
 ---
 
 <h1>{{ page.title }}</h1>
 <p>Interactive map of all the talks I’ve given.</p>
 
-<div id="main" role="main" style="max-width:none; padding:40px 20px;">
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title"></h1>
-      <!-- Leaflet CSS and JS hosted locally -->
-    <link rel="stylesheet" href="{{ '/assets/vendor/leaflet/leaflet.css' | relative_url }}">
-    <script src="{{ '/assets/vendor/leaflet/leaflet.js' | relative_url }}"></script>
-    </header>
+<!-- Leaflet CSS and JS hosted locally -->
+<link rel="stylesheet" href="{{ '/assets/vendor/leaflet/leaflet.css' | relative_url }}">
+<script src="{{ '/assets/vendor/leaflet/leaflet.js' | relative_url }}"></script>
 
-    <!-- Map container -->
-    <div id="map" style="width:100%; height:600px;"></div>
-    <style>
-  /* Ensure map has explicit height */
-  #map { height: 600px !important; width: 100% !important; }
+<style>
+  #map {
+    height: 600px !important;
+    width: 100% !important;
+  }
 </style>
 
+<div id="main" role="main" style="max-width:none; padding:40px 20px;">
+  <article class="post">
+
+    <!-- Map container -->
+    <div id="map"></div>
+
+  </article>
+</div>
+
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-  // Initialize map zoomed out globally
+document.addEventListener("DOMContentLoaded", function () {
+
   var map = L.map('map').setView([20, 0], 2);
 
-  // Add OpenStreetMap tiles over HTTPS
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© OpenStreetMap contributors'
   }).addTo(map);
 
-  // Example talks - replace with your data or JSON fetch
   const talks = [
-  { "title": "19th Panhellenic conference in mathematical analysis,", "venue": "National Technical University, Athens Greece", "lat": 37.97849, "lng": 23.785228 }
-];
+    {
+      title: "19th Panhellenic conference in mathematical analysis",
+      venue: "National Technical University, Athens Greece",
+      lat: 37.97849,
+      lng: 23.785228
+    }
+  ];
 
-  // Add markers without changing zoom
   talks.forEach(t => {
     L.marker([t.lat, t.lng])
       .addTo(map)
       .bindPopup("<strong>" + t.title + "</strong><br>" + t.venue);
   });
+
 });
 </script>
 
-</script>
-  </article>
-</div>
 
 
 
