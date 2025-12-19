@@ -20,20 +20,17 @@ permalink: /talkmap.html
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-  // Initialize map zoomed out globally
-  var map = L.map('map').setView([20, 0], 2);
+  var map = L.map('map').setView([20,0],2);
 
-  // Add OpenStreetMap tiles over HTTPS
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© OpenStreetMap contributors'
   }).addTo(map);
 
-  // Example talks - replace with your data or JSON fetch
+  // Inline array of talks
   const talks = [
   { "title": "19th Panhellenic conference in mathematical analysis,", "venue": "National Technical University, Athens Greece", "lat": 37.97849, "lng": 23.785228 }
-]
+];
 
-  // Add markers without changing zoom
   talks.forEach(t => {
     L.marker([t.lat, t.lng])
       .addTo(map)
