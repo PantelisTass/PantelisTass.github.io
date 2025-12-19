@@ -11,7 +11,7 @@ leaflet: true
 <div id="main" role="main" style="max-width:none; padding:40px 20px;">
   <article class="post">
     <header class="post-header">
-      <h1 class="post-title">{{ page.title }}</h1>
+      <h1 class="post-title"></h1>
       <!-- Leaflet CSS and JS hosted locally -->
     <link rel="stylesheet" href="/assets/vendor/leaflet/leaflet.css" />
     <script src="/assets/vendor/leaflet/leaflet.js"></script>
@@ -19,10 +19,7 @@ leaflet: true
 
     <!-- Map container -->
     <div id="map" style="width:100%; height:600px;"></div>
-  </article>
-</div>
-
-<style>
+    <style>
   /* Ensure map has explicit height */
   #map { height: 600px !important; width: 100% !important; }
 </style>
@@ -52,6 +49,9 @@ document.addEventListener("DOMContentLoaded", function() {
 </script>
 
 </script>
+  </article>
+</div>
+
 
 
 
