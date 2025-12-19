@@ -7,32 +7,43 @@ permalink: /talkmap.html
 <h1>{{ page.title }}</h1>
 <p>Interactive map of all the talks I’ve given.</p>
 
-<div id="map"></div>
+ <div id="map" style="width:100%; height:600px;"></div>
 
+<!-- Leaflet CSS and JS over HTTPS -->
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
 <style>
+  /* Ensure map has explicit height */
   #map { height: 600px !important; width: 100% !important; }
 </style>
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-  try {
-    // Initialize map zoomed out globally
-    var map = L.map('map').setView([20, 0], 2);
+  // Initialize map zoomed out globally
+  var map = L.map('map').setView([20, 0], 2);
 
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '© OpenStreetMap contributors'
-    }).addTo(map);
+  // Add OpenStreetMap tiles
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap contributors'
+  }).addTo(map);
 
-    // Test marker to ensure map renders
-    L.marker([0, 0]).addTo(map).bindPopup("Map is working!").openPopup();
-  } catch(e) {
-    console.error("Leaflet failed to initialize:", e);
-  }
+  // Load talks from assets JSON
+  fetch('/assets/data/talks.json')
+    .then(res => res.json())
+    .then(talks => {
+      talks.forEach(t => {
+        if (t.lat && t.lng) {
+          L.marker([t.lat, t.lng])
+            .addTo(map)
+            .bindPopup("<strong>" + t.title + "</strong><br>" + t.venue);
+        }
+      });
+    })
+    .catch(err => console.error("Failed to load talks JSON:", err));
 });
 </script>
+
 
 
 
