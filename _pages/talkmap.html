@@ -7,11 +7,11 @@ permalink: /talkmap.html
 <h1>{{ page.title }}</h1>
 <p>Interactive map of all the talks I’ve given.</p>
 
- <div id="map" style="width:100%; height:600px;"></div>
+<div id="map" style="width:100%; height:600px;"></div>
 
-<!-- Leaflet CSS and JS over HTTPS -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<!-- Leaflet CSS and JS hosted locally -->
+<link rel="stylesheet" href="/assets/vendor/leaflet/leaflet.css" />
+<script src="/assets/vendor/leaflet/leaflet.js"></script>
 
 <style>
   /* Ensure map has explicit height */
@@ -23,26 +23,25 @@ document.addEventListener("DOMContentLoaded", function() {
   // Initialize map zoomed out globally
   var map = L.map('map').setView([20, 0], 2);
 
-  // Add OpenStreetMap tiles
+  // Add OpenStreetMap tiles over HTTPS
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© OpenStreetMap contributors'
   }).addTo(map);
 
-  // Load talks from assets JSON
-  fetch('/assets/data/talks.json')
-    .then(res => res.json())
-    .then(talks => {
-      talks.forEach(t => {
-        if (t.lat && t.lng) {
-          L.marker([t.lat, t.lng])
-            .addTo(map)
-            .bindPopup("<strong>" + t.title + "</strong><br>" + t.venue);
-        }
-      });
-    })
-    .catch(err => console.error("Failed to load talks JSON:", err));
+  // Example talks - replace with your data or JSON fetch
+  const talks = [
+  { "title": "19th Panhellenic conference in mathematical analysis,", "venue": "National Technical University, Athens Greece", "lat": 37.97849, "lng": 23.785228 }
+]
+
+  // Add markers without changing zoom
+  talks.forEach(t => {
+    L.marker([t.lat, t.lng])
+      .addTo(map)
+      .bindPopup("<strong>" + t.title + "</strong><br>" + t.venue);
+  });
 });
 </script>
+
 
 
 
