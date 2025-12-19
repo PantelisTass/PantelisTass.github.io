@@ -6,64 +6,44 @@ layout: default
   <article class="post">
     <header class="post-header">
       <h1 class="post-title">{{ page.title }}</h1>
-
       {% if page.page_intro %}
         <p class="page-intro">{{ page.page_intro }}</p>
       {% endif %}
 
-      {% if site.talkmap_link %}
-        <p style="text-decoration:underline;">
-          <a href="{{ '/talkmap.html' | relative_url }}">
-            See a map of all the places I've given a talk!
-          </a>
-        </p>
+      {% if site.talkmap_link == true %}
+      <p style="text-decoration:underline;"><a href="/talkmap.html">See a map of all the places I've given a talk!</a></p>
       {% endif %}
     </header>
 
     <div class="post-content">
-      <div class="classes-container">
-
-        {% assign talks = site.talks | sort: "year" | reverse %}
-
-        {% for talk in talks %}
-          <div class="conference-card">
+      <div class="classes-container"> <!-- reuse container styling -->
+        {% assign notes = site.talks | sort: "year" | reverse %}
+        {% for note in notes %}
+          <div class="conference-card"> <!-- reuse conference-card styling -->
             <div class="conf-meta">
-
-              {% if talk.year %}
-                <span class="conf-year">{{ talk.year }}</span>
-              {% elsif talk.date %}
-                <span class="conf-year">{{ talk.date | date: "%Y" }}</span>
-              {% endif %}
-
-              {% if talk.venue %}
-                • <span class="conf-venue">{{ talk.venue }}</span>
-              {% endif %}
+              <span class="conf-year">{{ note.date | date: "%Y" }}</span>
+              {% if note.venue %}• <span class="conf-venue">{{ note.venue }}</span>{% endif %}
             </div>
 
-            <h2 class="conf-title">{{ talk.title }}</h2>
+            <h2 class="conf-title">{{ note.title }}</h2>
 
-            {% if talk.excerpt %}
-              <p class="conf-excerpt">{{ talk.excerpt }}</p>
+            {% if note.excerpt %}
+              <p class="conf-excerpt">{{ note.excerpt }}</p>
             {% endif %}
 
-            {% if talk.materials %}
+            {% if note.materials %}
               <div class="conf-links">
-                {% for item in talk.materials %}
+                {% for item in note.materials %}
                   <div class="pdf-link">
-                    <a href="{{ item.file | relative_url }}">
-                      {{ item.title }}
-                    </a>
+                    <a href="{{ item.file | relative_url }}">{{ item.title }}</a>
                   </div>
                 {% endfor %}
               </div>
             {% endif %}
-
           </div>
         {% endfor %}
-
       </div>
     </div>
   </article>
 </div>
-
 
