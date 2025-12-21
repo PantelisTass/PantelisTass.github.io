@@ -4,59 +4,70 @@ title: "Talk Map"
 permalink: /talkmap.html
 ---
 
-<h1>{{ page.title }}</h1>
-<p>Interactive map of all the talks I’ve given.</p>
+{% include base_path %}
 
-<!-- Leaflet CSS and JS hosted locally -->
-<link rel="stylesheet" href="{{ '/assets/vendor/leaflet/leaflet.css' | relative_url }}">
-<script src="{{ '/assets/vendor/leaflet/leaflet.js' | relative_url }}"></script>
+<div id="main" role="main" style="max-width:none; padding: 0; width: 100%; display: flex; flex-direction: column; min-height: 100vh;">
 
-<style>
-  #map {
-    height: 600px !important;
-    width: 100% !important;
-  }
-</style>
+  <article class="post" style="flex: 1 0 auto; width: 100%;">
+    
+    <header class="post-header" style="max-width: none; padding: 40px 20px 0 40px; margin-bottom: 0;">
+      <h1 class="post-title" style="margin: 0; padding: 0; border: none; line-height: 1.1;">{{ page.title }}</h1>
+      <p class="page-intro" style="margin-top: 10px; color: #666;">Interactive map of all the talks I’ve given.</p>
+      
+      <div style="height: 1px; margin-top: 20px; width: 100%;"></div>
+    </header>
 
-<div id="main" role="main" style="max-width:none; padding:40px 20px;">
-  <article class="post">
+    <div class="post-content" style="padding: 0 40px; margin-top: 0;">
+      <div style="padding-top: 40px; padding-bottom: 60px;">
+        
+        <link rel="stylesheet" href="{{ '/assets/vendor/leaflet/leaflet.css' | relative_url }}">
+        <script src="{{ '/assets/vendor/leaflet/leaflet.js' | relative_url }}"></script>
 
-    <!-- Map container -->
-    <div id="map"></div>
+        <style>
+          /* Map dimensions and style */
+          #map { 
+            height: 600px; 
+            width: 100%; 
+            border-radius: 4px; /* Slightly reduced to match standard card aesthetic */
+            border: 1px solid #eee; 
+            z-index: 1; /* Ensures map stays below certain navigation elements if necessary */
+          }
+        </style>    
+        
+        <div id="map"></div>
 
+        <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          var map = L.map('map').setView([20, 0], 2);
+          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+          }).addTo(map);
+
+          const talks = [
+            {
+              title: "19th Panhellenic conference in mathematical analysis",
+              venue: "National Technical University, Athens Greece",
+              lat: 37.97849,
+              lng: 23.785228
+            }
+          ];
+
+          talks.forEach(t => {
+            L.marker([t.lat, t.lng])
+              .addTo(map)
+              .bindPopup("<strong>" + t.title + "</strong><br>" + t.venue);
+          });
+        });
+        </script>
+      </div>
+    </div>
   </article>
+
+  <footer class="page__footer" style="width: 100%; flex-shrink: 0; margin: 0; border-top: 1px solid #f2f2f2;">
+    <div style="padding: 20px 20px; text-align: left;">
+      <span style="font-size: 0.9em; color: #090909;">
+        &copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}
+      </span>
+    </div>
+  </footer>
 </div>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-
-  var map = L.map('map').setView([20, 0], 2);
-
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '© OpenStreetMap contributors'
-  }).addTo(map);
-
-  const talks = [
-    {
-      title: "19th Panhellenic conference in mathematical analysis",
-      venue: "National Technical University, Athens Greece",
-      lat: 37.97849,
-      lng: 23.785228
-    }
-  ];
-
-  talks.forEach(t => {
-    L.marker([t.lat, t.lng])
-      .addTo(map)
-      .bindPopup("<strong>" + t.title + "</strong><br>" + t.venue);
-  });
-
-});
-</script>
-
-
-
-
-
-
-

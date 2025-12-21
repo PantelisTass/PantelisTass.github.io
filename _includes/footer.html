@@ -1,5 +1,7 @@
 {% include base_path %}
 
-<div class="page__footer-copyright">
-  &copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}
+<div class="page__footer-copyright" style="width: 100%; display: block; clear: both; margin: 0;">
+  <div style="max-width: none; padding: 20px 20px; text-align: left;">
+    &copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}
+  </div>
 </div>

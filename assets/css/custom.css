@@ -88,17 +88,6 @@
   font-style: normal !important;
 }
 
-/* Individual publication card */
-.publication-card {
-  background: #fff;
-  border-radius: 12px;
-  padding: 24px 30px;
-  margin-bottom: 40px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.05);
-  border: 1px solid #e0e0e0;
-  list-style: none;        /* remove bullets */
-}
-
 /* Metadata (year / venue) */
 .pub-meta {
   font-size: 0.9rem;
@@ -201,16 +190,6 @@
   padding-bottom: 40px;
 }
 
-.conference-card {
-  background: #fff;
-  border-radius: 12px;
-  padding: 24px 30px;
-  margin-bottom: 40px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.05);
-  border: 1px solid #e0e0e0;
-  list-style: none;
-}
-
 .teach-links .material-link {
   margin-bottom: 8px;
 }
@@ -292,10 +271,11 @@
 }
 
 .conference-card,
-.teaching-card {
-  background: rgba(255,255,255,0.62); /* white card look */
+.teaching-card,
+.publication-card {
+  background: rgba(255,255,255,0.60); /* white card look */
   padding: 24px 30px;
-  border-radius: 12px;
+  border-radius: 12px; 
   box-shadow: 0 6px 16px rgba(0,0,0,0.05);
   margin-bottom: 40px;
 }
@@ -343,7 +323,45 @@ body.conference-page {
   background-attachment: fixed;
 }
 
+/* Ensure the outer masthead spans 100% */
+.standardized-masthead-fullwidth {
+  width: 100%;
+  border-bottom: 1px solid #f2f2f2;
+}
 
+/* Match the exact padding of Talkmap and Teaching: 
+   40px top/bottom (if desired) and 20px sides 
+*/
+.standardized-masthead-fullwidth .masthead__inner-wrap {
+  max-width: none !important; /* Remove jekyll-theme constraints */
+  padding: 20px 20px !important; /* Match your 20px side padding */
+  margin: 0;
+}
+
+/* Ensure the nav container uses all available space */
+.standardized-masthead-fullwidth .greedy-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Spread out the links across the row */
+.standardized-masthead-fullwidth .visible-links {
+  display: flex;
+  justify-content: flex-start; /* Keeps title left and links following */
+  width: 100%;
+}
+
+/* Optional: If you want the links pushed to the right and title to the left */
+/* .standardized-masthead-fullwidth .masthead__menu-item--lg {
+  margin-right: auto;
+} 
+*/
+
+.standardized-masthead-fullwidth .masthead__menu-item {
+  margin-left: 20px;
+}
 
 
 
