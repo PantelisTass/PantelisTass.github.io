@@ -1,5 +1,6 @@
 ---
 title: "Quantitative Brownian regularity of the KPZ fixed point with arbitrary initial data"
+authors: "Pantelis Tassopoulos and Sourav Sarkar"
 type: preprint
 year: 2025
 venue: "arXiv"

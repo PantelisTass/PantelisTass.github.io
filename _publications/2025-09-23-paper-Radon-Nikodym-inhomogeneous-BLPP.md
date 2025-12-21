@@ -1,5 +1,6 @@
 ---
 title: "Radon-Nikodym derivative of inhomogeneous Brownian last passage percolation"
+authors: "Pantelis Tassopoulos and Sourav Sarkar"
 type: preprint
 year: 2025
 venue: "arXiv"

@@ -1,5 +1,6 @@
 ---
 title: "The KPZ Fixed Point and the Directed Landscape"
+authors: "Pantelis Tassopoulos"
 type: preprint
 year: 2024
 venue: "arXiv"
