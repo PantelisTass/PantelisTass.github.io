@@ -53,7 +53,7 @@ layout: default
             {% endif %}
 
             {% if course.materials %}
-              <div class="teach-links" style="display: flex; gap: 15px; margin-top: 15px;">
+              <div class="teach-links" style="display: flex; flex-wrap: wrap; gap: 15px; margin-top: 15px;">
                 {% for item in course.materials %}
                   <div class="material-link">
                     <a href="{{ item.file | relative_url }}" style="font-weight: bold; text-decoration: none; border-bottom: 1px solid;">{{ item.title }}</a>

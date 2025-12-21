@@ -42,7 +42,7 @@ layout: default
             {% endif %}
 
             {% if talk.pdfs %}
-              <div class="teach-links" style="display: flex; gap: 15px; margin-top: 15px;">
+              <div class="teach-links" style="display: flex; flex-wrap: wrap; gap: 15px; margin-top: 15px;">
                 {% for item in talk.pdfs %}
                   <div class="material-link">
                     <a href="{{ item.file | relative_url }}" style="font-weight: bold; text-decoration: none; border-bottom: 1px solid;">{{ item.title }}</a>
