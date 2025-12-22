@@ -1,106 +1,50 @@
 ---
 layout: default
 ---
-
 {% include base_path %}
-
-<div id="main" role="main" style="max-width:none; padding: 10px; width: 100%; display: flex; flex-direction: column; min-height: 100vh; margin: 0;">
-
-  <article class="post">
-    
-    <header class="post-header" style="max-width: none; padding-bottom: 20px; padding: 0 20px; margin-bottom: 0;">
+<div id="main" role="main" style="max-width:none; padding: 0; margin: 0; width: 100%; display: flex; flex-direction: column; min-height: 100vh;">
+  <article class="post" style="flex: 1 0 auto; width: 100%; margin: 0; display: flex; flex-direction: column;">
+    <header class="post-header" style="max-width: none; padding: 40px 20px 0 20px; margin-bottom: 0;">
       <h1 class="post-title" style="margin: 0; padding: 0px; border: none; line-height: 1.1;">{{ page.title }}</h1>
-      {% if page.page_intro %}
-        <p class="page-intro" style="margin-top: 10px; color: #666;">{{ page.page_intro }}</p>
-      {% endif %}
-      
-      <div style="height: 1px;  margin-top: 20px; width: 100%;"></div>
+      {% if page.page_intro %}<p class="page-intro" style="margin-top: 10px; color: #666;">{{ page.page_intro }}</p>{% endif %}
+      <div style="height: 1px; margin-top: 20px; width: 100%;"></div>
     </header>
-
-    <div class="post-content" style="padding: 0px; margin-top: 0;">
+    <div class="post-content" style="padding: 0 20px; margin-top: 0; flex: 1;">
       <div class="classes-container" style="padding-top: 40px; padding-bottom: 60px;">
-        
         {% assign notes = site.talks | sort: "year" | reverse %}
         {% for note in notes %}
           <div class="publication-card" style="margin-bottom: 40px; border-left: 4px solid #eee; padding-left: 20px;">
-            
             <div class="conf-meta" style="font-size: 0.9em; color: #666;">
               <span class="conf-year">{{ note.date | date: "%Y" }}</span>
               {% if note.venue %}• <span class="conf-venue">{{ note.venue }}</span>{% endif %}
             </div>
-
             <h2 class="conf-title" style="margin-top: 5px; margin-bottom: 10px; border: none;">{{ note.title }}</h2>
-
-            {% if note.excerpt %}
-              <p class="conf-excerpt" style="margin-bottom: 15px;">{{ note.excerpt }}</p>
-            {% endif %}
-
+            {% if note.excerpt %}<p class="conf-excerpt" style="margin-bottom: 15px;">{{ note.excerpt }}</p>{% endif %}
             {% if note.materials %}
               <div class="teach-links" style="display: flex; flex-wrap: wrap; gap: 15px; margin-top: 15px;">
-                {% for item in note.materials %}
-                  <div class="material-link" style="flex: 0 0 calc(25% - 15px); min-width: fit-content;">
-                    <a href="{{ item.file | relative_url }}" style="font-weight: bold; text-decoration: none; border-bottom: 1px solid;">{{ item.title }}</a>
-                  </div>
-                {% endfor %}
+                {% for item in note.materials %}<div class="material-link" style="flex: 0 0 calc(25% - 15px); min-width: fit-content;"><a href="{{ item.file | relative_url }}" style="font-weight: bold; text-decoration: none; border-bottom: 1px solid;">{{ item.title }}</a></div>{% endfor %}
               </div>
             {% endif %}
-            
           </div>
         {% endfor %}
       </div>
-    </div>
-
-    <h2 style="margin: 0; padding: 20px; border: none; line-height: 1.1;">A map of all the talks I have given</h2>
-
-    <div style="padding: 0 20px; padding-bottom: 60px;">
-        
+      <h2 style="margin: 0; padding: 20px 0; border: none; line-height: 1.1;">A map of all the talks I have given</h2>
+      <div style="padding-bottom: 60px;">
         <link rel="stylesheet" href="{{ '/assets/vendor/leaflet/leaflet.css' | relative_url }}">
         <script src="{{ '/assets/vendor/leaflet/leaflet.js' | relative_url }}"></script>
-
-        <style>
-          /* Map dimensions and style */
-          #map { 
-            height: 600px; 
-            width: 100%; 
-            border-radius: 4px; /* Slightly reduced to match standard card aesthetic */
-            border: 1px solid #eee; 
-            z-index: 1; /* Ensures map stays below certain navigation elements if necessary */
-          }
-        </style>    
-        
-        <div id="map"></div>
-
+        <div id="map" style="height: 600px; width: 100%; border-radius: 4px; border: 1px solid #eee; z-index: 1;"></div>
         <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          var map = L.map('map').setView([20, 0], 2);
-          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '© OpenStreetMap contributors'
-          }).addTo(map);
-
-          const talks = [
-            {
-              title: "19th Panhellenic conference in mathematical analysis",
-              venue: "National Technical University, Athens Greece",
-              lat: 37.97849,
-              lng: 23.785228
-            }
-          ];
-
-          talks.forEach(t => {
-            L.marker([t.lat, t.lng])
-              .addTo(map)
-              .bindPopup("<strong>" + t.title + "</strong><br>" + t.venue);
+          document.addEventListener("DOMContentLoaded", function () {
+            var map = L.map('map').setView([20, 0], 2);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '© OpenStreetMap contributors' }).addTo(map);
+            const talks = [{ title: "19th Panhellenic conference in mathematical analysis", venue: "National Technical University, Athens Greece", lat: 37.97849, lng: 23.785228 }];
+            talks.forEach(t => { L.marker([t.lat, t.lng]).addTo(map).bindPopup("<strong>" + t.title + "</strong><br>" + t.venue); });
           });
-        });
         </script>
       </div>
-  </article>
-
-  <footer class="page__footer" style="width: 100%; flex-shrink: 0; margin: 0; border-top: 1px solid #f2f2f2;">
-    <div style="padding: 20px 20px; text-align: left;">
-      <span style="font-size: 0.9em; color: #090909;">
-        &copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}
-      </span>
     </div>
+  </article>
+  <footer class="page__footer" style="width: 100%; flex-shrink: 0; margin: 0; border-top: 1px solid #f2f2f2;">
+    <div style="padding: 20px 20px; text-align: left;"><span style="font-size: 0.9em; color: #090909;">&copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}</span></div>
   </footer>
 </div>

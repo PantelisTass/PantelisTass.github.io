@@ -1,39 +1,19 @@
 ---
 layout: default
 ---
-
 {% include base_path %}
-
-<div id="main" role="main" style="max-width:none; padding: 10px; width: 100%; display: flex; flex-direction: column; min-height: 100vh; margin: 0;">
-
-  <article class="post" style="flex: 1 0 auto; width: 100%;">
-
-    <div class="post-content" style="padding: 0; margin-top: 0;">
-      <div class="publications-container" style="padding-top: 0px;">
-
-        <h1 style="max-width: none; padding: 0 20px; margin-bottom: 40px;">Preprints</h1>
-
+<div id="main" role="main" style="max-width:none; padding: 0; margin: 0; width: 100%; display: flex; flex-direction: column; min-height: 100vh;">
+  <article class="post" style="flex: 1 0 auto; width: 100%; margin: 0; display: flex; flex-direction: column;">
+    <div class="post-content" style="padding: 0 20px; margin-top: 0; flex: 1;">
+      <div class="publications-container" style="padding-top: 40px; padding-bottom: 60px;">
+        <h1 style="max-width: none; padding: 0; margin-bottom: 40px;">Preprints</h1>
         {% assign preprints = site.publications | where:"type","preprint" | sort:"year" | reverse %}
         {% for post in preprints %}
           <div class="publication-card" style="margin-bottom: 30px; border-left: 4px solid #eee; padding-left: 20px;">
-
-            <div class="pub-meta" style="font-size: 0.9em; color: #666; margin-bottom: 5px;">
-              <span class="pub-year">{{ post.year }}</span>
-              {% if post.venue %} • <span class="pub-venue">{{ post.venue }}</span>{% endif %}
-            </div>
-
-            <h2 class="pub-title" style="margin-top: 0; margin-bottom: 10px; border: none;">
-              {% if post.link %}<a href="{{ post.link }}">{{ post.title }}</a>{% else %}{{ post.title }}{% endif %}
-            </h2>
-
-            {% if post.authors %}
-              <p class="pub-authors" style="font-style: italic; margin-bottom: 10px;">{{ post.authors }}</p>
-            {% endif %}
-
-            {% if post.excerpt %}
-              <p>{{ post.excerpt }}</p>
-            {% endif %}
-
+            <div class="pub-meta" style="font-size: 0.9em; color: #666; margin-bottom: 5px;"><span class="pub-year">{{ post.year }}</span>{% if post.venue %} • <span class="pub-venue">{{ post.venue }}</span>{% endif %}</div>
+            <h2 class="pub-title" style="margin-top: 0; margin-bottom: 10px; border: none;">{% if post.link %}<a href="{{ post.link }}">{{ post.title }}</a>{% else %}{{ post.title }}{% endif %}</h2>
+            {% if post.authors %}<p class="pub-authors" style="font-style: italic; margin-bottom: 10px;">{{ post.authors }}</p>{% endif %}
+            {% if post.excerpt %}<p>{{ post.excerpt }}</p>{% endif %}
             <div class="pub-links" style="display: flex; gap: 15px; font-weight: bold;">
               {% if post.pdf %}<a href="{{ post.pdf | relative_url }}" style="text-decoration: none; border-bottom: 1px solid;">PDF</a>{% endif %}
               {% if post.code %}<a href="{{ post.code }}" style="text-decoration: none; border-bottom: 1px solid;">Code</a>{% endif %}
@@ -41,31 +21,14 @@ layout: default
             </div>
           </div>
         {% endfor %}
-
-
-        <h1 style="max-width: none; padding: 0 20px; margin-top: 20px; margin-bottom: 60px;">Publications</h1>
-
+        <h1 style="max-width: none; padding: 0; margin-top: 20px; margin-bottom: 60px;">Publications</h1>
         {% assign pubs = site.publications | where:"type","publication" | sort:"year" | reverse %}
         {% for post in pubs %}
           <div class="publication-card" style="margin-bottom: 30px; border-left: 4px solid #eee; padding-left: 20px;">
-
-            <div class="pub-meta" style="font-size: 0.9em; color: #666; margin-bottom: 5px;">
-              <span class="pub-year">{{ post.year }}</span>
-              {% if post.venue %} • <span class="pub-venue">{{ post.venue }}</span>{% endif %}
-            </div>
-
-            <h2 class="pub-title" style="margin-top: 0; margin-bottom: 10px; border: none;">
-              {% if post.link %}<a href="{{ post.link }}">{{ post.title }}</a>{% else %}{{ post.title }}{% endif %}
-            </h2>
-
-            {% if post.authors %}
-              <p class="pub-authors" style="font-style: italic; margin-bottom: 10px;">{{ post.authors }}</p>
-            {% endif %}
-
-            {% if post.excerpt %}
-              <p>{{ post.excerpt }}</p>
-            {% endif %}
-
+            <div class="pub-meta" style="font-size: 0.9em; color: #666; margin-bottom: 5px;"><span class="pub-year">{{ post.year }}</span>{% if post.venue %} • <span class="pub-venue">{{ post.venue }}</span>{% endif %}</div>
+            <h2 class="pub-title" style="margin-top: 0; margin-bottom: 10px; border: none;">{% if post.link %}<a href="{{ post.link }}">{{ post.title }}</a>{% else %}{{ post.title }}{% endif %}</h2>
+            {% if post.authors %}<p class="pub-authors" style="font-style: italic; margin-bottom: 10px;">{{ post.authors }}</p>{% endif %}
+            {% if post.excerpt %}<p>{{ post.excerpt }}</p>{% endif %}
             <div class="pub-links" style="display: flex; gap: 15px; font-weight: bold;">
               {% if post.pdf %}<a href="{{ post.pdf | relative_url }}" style="text-decoration: none; border-bottom: 1px solid;">PDF</a>{% endif %}
               {% if post.code %}<a href="{{ post.code }}" style="text-decoration: none; border-bottom: 1px solid;">Code</a>{% endif %}
@@ -73,18 +36,10 @@ layout: default
             </div>
           </div>
         {% endfor %}
-
       </div>
     </div>
   </article>
-</div>
-
-<div class="page__footer" style="width: 100%; float: left; clear: both; margin-top: 40px;">
-  <footer style="max-width: none; margin: 0; padding: 0; border-top: 1px solid #f2f2f2;">
-    <div style="padding: 20px 20px; text-align: left;">
-      <span style="font-size: 0.9em; color: #333;">
-        &copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}
-      </span>
-    </div>
+  <footer class="page__footer" style="width: 100%; flex-shrink: 0; margin: 0; border-top: 1px solid #f2f2f2;">
+    <div style="padding: 20px 20px; text-align: left;"><span style="font-size: 0.9em; color: #090909;">&copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}</span></div>
   </footer>
 </div>
