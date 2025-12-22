@@ -48,12 +48,66 @@
   }
 }
 
-/* Sidebar also gets the card look */
+/* 1. Align the main content wrapper with the masthead */
+#main {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  margin-bottom: -80px !important;
+  max-width: none !important;
+  width: 100% !important;
+  /* This creates the 20px 'gutter' that matches your menu */
+  padding-left: 20px !important; 
+  padding-bottom: 0px !important;
+
+  min-height: calc(100vh - 180px) !important;
+  box-sizing: border-box !important;
+}
+
+/* --- SIDEBAR ALIGNMENT LOCK --- */
+
+/* 1. Normal State: Align the card box with the 20px masthead offset */
 .sidebar {
+  /* This margin matches the 20px padding of your masthead text */
+  margin-left: 0px !important;
+  margin-top: -1px !important; 
+  margin-bottom: px !important; 
+  /* KEEP ORIGINAL LOOK (Colors, padding, and ribbon feel) */
   background: rgba(246, 242, 238, 0.9) !important;
   border-radius: 10px !important;
   padding: 1.5rem !important;
   box-shadow: 0 3px 9px rgba(0,0,0,0.12) !important;
+  /* Ensure the sidebar stays on top of any background tiling */
+  position: relative !important;
+  z-index: 10;
+}
+
+/* 2. Sticky State: Prevent the sidebar from jumping to the far left edge */
+.sidebar.sticky {
+  /* When sticky, 'left' governs position relative to the viewport */
+  left: -10px !important; 
+  /* Reset margin to avoid double-offsetting when sticky */
+  margin-left: 0 !important;
+  top: -15px !important;
+  bottom: -20px !important;
+}
+
+/* 3. Author Profile Alignment: Ensure internal text hits the card edge */
+.author-profile, 
+.sidebar .nav_list {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+}
+
+/* 4. Mobile Responsiveness: Reset for single-column view */
+@media (max-width: 800px) {
+  .sidebar, 
+  .sidebar.sticky {
+    margin-left: 0px !important;
+    left: 0 !important;
+    width: 100% !important;
+    position: relative !important;
+    top: 0 !important;
+  }
 }
 
 /* Each PDF link on its own line */
