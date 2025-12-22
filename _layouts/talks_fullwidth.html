@@ -4,12 +4,12 @@ layout: default
 
 {% include base_path %}
 
-<div id="main" role="main" style="max-width:none; padding: 0; width: 100%; display: flex; flex-direction: column; min-height: 100vh;">
+<div id="main" role="main">
 
-  <article class="post" style="flex: 1 0 auto; width: 100%;">
+  <article class="post">
     
-    <header class="post-header" style="max-width: none; padding: 40px 20px 0 20px; margin-bottom: 0;">
-      <h1 class="post-title" style="margin: 0; padding: 20px; border: none; line-height: 1.1;">{{ page.title }}</h1>
+    <header class="post-header" style="max-width: none; padding-bottom: 20px; padding: 0 20px; margin-bottom: 0;">
+      <h1 class="post-title" style="margin: 0; padding: 0px; border: none; line-height: 1.1;">{{ page.title }}</h1>
       {% if page.page_intro %}
         <p class="page-intro" style="margin-top: 10px; color: #666;">{{ page.page_intro }}</p>
       {% endif %}
@@ -50,9 +50,9 @@ layout: default
       </div>
     </div>
 
-    <h2 style="margin: 0; padding: 40px; border: none; line-height: 1.1;">A map of all the talks I have given</h2>
+    <h2 style="margin: 0; padding: 20px; border: none; line-height: 1.1;">A map of all the talks I have given</h2>
 
-    <div style="padding: 40px; padding-bottom: 60px;">
+    <div style="padding: 0 20px; padding-bottom: 60px;">
         
         <link rel="stylesheet" href="{{ '/assets/vendor/leaflet/leaflet.css' | relative_url }}">
         <script src="{{ '/assets/vendor/leaflet/leaflet.js' | relative_url }}"></script>

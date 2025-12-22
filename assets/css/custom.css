@@ -351,12 +351,10 @@ body.classes-page {
 
 body.teaching-page {
   /* Background layers: color first, then ink blot image */
-  background-image: url('/assets/images/tiling.png'); /* corner decoration */
+  background-image: url('/assets/images/tiling.png'); 
   background-size: cover;              /* default tiling */
-  background-attachment: fixed;       /* optional */
   background-color: #fefefe;          /* fallback */
-  margin: 0;
-  padding: 0;
+  background-attachment: fixed;
 }
 
 /* Darker blue links */
