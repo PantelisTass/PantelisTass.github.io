@@ -1,87 +1,63 @@
-{% include base_path %}
-
 <style>
-  /* Base Navicon (The middle bar) */
-  .greedy-nav .navicon {
-    background: #1b1b1b !important;
-    height: 3px !important;
-    width: 20px !important;
-    transition: background 0.2s ease; /* Smooth transition when hiding */
-    position: relative;
-    display: block;
+  /* 1. Reset containers to be full width without internal padding */
+  .masthead {
+    width: 100% !important;
+    border-bottom: 1px solid #1b1b1b !important;
+    padding: 0 !important;
   }
 
-  /* Top and Bottom Bars */
-  .greedy-nav .navicon:before,
-  .greedy-nav .navicon:after {
-    content: "";
-    background: #1b1b1b !important;
-    height: 3px !important;
-    width: 20px !important;
-    position: absolute;
-    display: block;
-    transition: all 0.2s ease;
+  .masthead__inner-wrap {
+    width: 100% !important;
+    max-width: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
   }
 
-  /* Bar Positions */
-  .greedy-nav .navicon:before { top: -7px; }
-  .greedy-nav .navicon:after { bottom: -7px; }
-
-  /* --- THE "OPEN" STATE (When clicked) --- */
-  
-  /* 1. Hide the middle bar */
-  .greedy-nav .close .navicon {
-    background: transparent !important;
+  /* 2. Remove padding from the nav so the JS math stays perfect */
+  .greedy-nav {
+    display: flex !important;
+    width: 100% !important;
+    padding: 0 !important; 
+    margin: 0 !important;
+    overflow: visible !important; /* Ensures the button is never cut off */
   }
 
-  /* 2. Rotate the top and bottom bars to form an X */
-  .greedy-nav .close .navicon:before {
-    top: 0 !important;
-    transform: rotate(45deg);
+  /* 3. Shift the FIRST and LAST items to create the 20px alignment */
+  .visible-links {
+    display: flex !important;
+    flex: 1 !important;
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 
-  .greedy-nav .close .navicon:after {
-    top: 0 !important;
-    transform: rotate(-45deg);
-  }
-
-  /* Popup list styling */
-  .greedy-nav .hidden-links {
-    background: rgba(255, 255, 255, 0.98) !important;
-    border: 1px solid #1b1b1b !important;
-    border-radius: 8px !important;
-    box-shadow: 0 6px 16px rgba(0,0,0,0.1) !important;
-    padding: 10px 0 !important;
-    margin-top: 10px;
+  /* Your Name / Site Title (The far left item) */
+  .masthead__menu-item--lg {
+    padding-left: 20px !important; /* This aligns with your content */
   }
 </style>
 
 {% include base_path %}
 
-<div class='masthead' style='display: block !important; width: 100% !important; max-width: none !important; margin: 0 !important; padding: 0 20px !important; border-bottom: 1px solid #1b1b1b; box-sizing: border-box;'>
-  
-  <div class='masthead__inner-wrap' style='display: block !important; width: 100% !important; max-width: none !important; margin: 0 !important; padding: 0 20px !important; box-sizing: border-box !important;'>
-    
-    <div class='masthead__menu' style='width: 100%;'>
-      <nav id='site-nav' class='greedy-nav' style='display: flex; align-items: center; justify-content: space-between;'>
-        
-        <ul class='visible-links' style='display: flex; list-style: none; margin: 0; padding: 0; align-items: center;'>
-          <li class='masthead__menu-item masthead__menu-item--lg'>
-            <a href='{{ base_path }}/' style='font-weight: bold; text-decoration: none; color: #1b1b1b;'>{{ site.title }}</a>
+<div class='masthead'>
+  <div class='masthead__inner-wrap'>
+    <nav id='site-nav' class='greedy-nav'>
+      <ul class='visible-links'>
+        <li class='masthead__menu-item masthead__menu-item--lg'>
+          <a href='{{ base_path }}/' style='font-weight: bold; text-decoration: none; color: #1b1b1b;'>{{ site.title }}</a>
+        </li>
+        {% for link in site.data.navigation.main %}
+          <li class='masthead__menu-item'>
+            <a href='{{ base_path }}{{ link.url }}' style='text-decoration: none; color: #1b1b1b; margin-left: 20px;'>{{ link.title }}</a>
           </li>
-          {% for link in site.data.navigation.main %}
-            <li class='masthead__menu-item'>
-              <a href='{{ base_path }}{{ link.url }}' style='text-decoration: none; color: #1b1b1b; margin-left: 15px;'>{{ link.title }}</a>
-            </li>
-          {% endfor %}
-        </ul>
+        {% endfor %}
+      </ul>
 
-        <button class='greedy-nav__toggle hidden' type='button' style='background: none; border: none; padding: 0; cursor: pointer; margin-left: auto;'>
-          <div class='navicon'></div>
-        </button>
+      <button class='greedy-nav__toggle hidden' type='button'>
+        <div class='navicon'></div>
+      </button>
 
-        <ul class='hidden-links hidden'></ul>
-      </nav>
-    </div>
+      <ul class='hidden-links hidden'></ul>
+    </nav>
   </div>
 </div>
