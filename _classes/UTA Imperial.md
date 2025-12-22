@@ -1,5 +1,5 @@
 ---
-title: "Imperial maths undergraduate courses 2020-2023"
+title: "Imperial 2020-2023"
 type: "Undergraduate Courses"
 year: 2022
 materials:
@@ -19,4 +19,10 @@ materials:
     file: "/files/Fourier_Analysis_and_the_theory_of_distributions_Coursework_1__01862156_.pdf"
   - title: "Introduction to SDEs and Diffusion Processes (2022-2023) – Coursework 1"
     file: "/files/Introduction_To_SDEs_And_Diffusion_Processes_Coursework_1__01862156_.pdf"
+  - title: "Mathematics of machine learning notes (2023)"
+    file: /materials/UROP 2023
+  - title: "Notes on the Darboux transform (2022)"
+    file: /materials/SYP Imperial
+  - title: "Poster presentation on Solitary Waves and the KdV Equation (2021)"
+    file: /materials/kdv year 1
 ---
