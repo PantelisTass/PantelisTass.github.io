@@ -1,87 +1,89 @@
 <style>
-/* Target the sticky classes used by the theme */
-.masthead.is-sticky, 
-.sticky .masthead,
-.masthead--fixed {
-  position: relative !important; /* Changes it from fixed/sticky back to normal */
-  height: auto !important;
-  transition: none !important; /* Stop the "morphing" animation */
-}
-
-/* Ensure the inner wrap doesn't shrink when sticky */
-.masthead.is-sticky .masthead__inner-wrap,
-.sticky .masthead__inner-wrap {
-  padding: 0 20px !important;
-  height: auto !important;
-  max-width: none !important;
-}
-
-/* 2. Create a "Hardware-Accelerated" border */
-.masthead::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  /* Using 1.5px or 2px can help on high-res mobile screens */
-  height: 1px; 
-  background-color: #1b1b1b;
-  display: block;
-  z-index: 10;
-}
-
-  .masthead__inner-wrap {
+  /* 1. Force the outer masthead to span the entire screen width */
+  .masthead {
+    display: block !important;
     width: 100% !important;
-    max-width: none !important;
-    padding: 0 !important;
+    max-width: none !important; /* Removes the container cap */
     margin: 0 !important;
+    padding: 0 !important;
+    border-bottom: 1px solid #1b1b1b !important;
+    box-sizing: border-box !important;
   }
 
-  /* 2. Remove padding from the nav so the JS math stays perfect */
+  /* 2. Ensure the inner wrap fills the parent 100% */
+  .masthead__inner-wrap {
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important; /* Keep 0 to protect Greedy Nav math */
+    box-sizing: border-box !important;
+  }
+
+  /* 3. Navigation alignment logic */
   .greedy-nav {
     display: flex !important;
     width: 100% !important;
+    /* This ensures the content aligns with your 20px page margins */
     padding: 0 !important; 
-    margin: 0 !important;
-    overflow: visible !important; /* Ensures the button is never cut off */
   }
 
-  /* 3. Shift the FIRST and LAST items to create the 20px alignment */
-  .visible-links {
-    display: flex !important;
-    flex: 1 !important;
-    list-style: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  /* Your Name / Site Title (The far left item) */
+  /* Force the first and last elements to provide the 20px 'margin' look */
   .masthead__menu-item--lg {
-    padding-left: 20px !important; /* This aligns with your content */
+    padding-left: 20px !important;
+  }
+
+  .greedy-nav__toggle {
+    /* Keeps your navicon aligned with the right side of the page content */
+    padding-right: 20px !important; 
+    margin-left: auto !important;
+    background: transparent; /* Maintains original color behavior */
+    border: none;
+    cursor: pointer;
+  }
+
+  /* 4. SOLID DROPDOWN (Per your request to not be transparent) */
+  .greedy-nav .hidden-links {
+    background: #ffffff !important; /* Solid white background */
+    border: 1px solid #1b1b1b !important;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1) !important;
+    padding: 10px 0 !important;
+    visibility: visible !important;
+    opacity: 1 !important; /* Ensures no transparency */
+  }
+
+  /* 5. Hide Masthead Border when menu is open */
+  .greedy-nav.close {
+    border-bottom: none !important;
   }
 </style>
 
-{% include base_path %}
-
-<div class='masthead'>
-  <div class='masthead__inner-wrap'>
-    <nav id='site-nav' class='greedy-nav'>
-      <ul class='visible-links'>
-        <li class='masthead__menu-item masthead__menu-item--lg'>
-          <a href='{{ base_path }}/' style='font-weight: bold; text-decoration: none; color: #1b1b1b;'>{{ site.title }}</a>
-        </li>
-        {% for link in site.data.navigation.main %}
-          <li class='masthead__menu-item'>
-            <a href='{{ base_path }}{{ link.url }}' style='text-decoration: none; color: #1b1b1b; margin-left: 20px;'>{{ link.title }}</a>
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <ul class="visible-links">
+          <li class="masthead__menu-item masthead__menu-item--lg">
+            <a href="{{ base_path }}/" style="text-decoration: none;">{{ site.title }}</a>
           </li>
-        {% endfor %}
-      </ul>
-
-      <button class='greedy-nav__toggle hidden' type='button'>
-        <div class='navicon'></div>
-      </button>
-
-      <ul class='hidden-links hidden'></ul>
-    </nav>
+          {% for link in site.data.navigation.main %}
+            {% if link.url contains 'http' %}
+              {% assign domain = '' %}
+            {% else %}
+              {% assign domain = base_path %}
+            {% endif %}
+            <li class="masthead__menu-item">
+              <a href="{{ domain }}{{ link.url }}" style="text-decoration: none;">{{ link.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+        
+        <button type="button" class="greedy-nav__toggle hidden">
+          <div class="navicon"></div>
+        </button>
+        
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
   </div>
 </div>
