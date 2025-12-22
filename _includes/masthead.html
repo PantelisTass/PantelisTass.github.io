@@ -1,5 +1,38 @@
 {% include base_path %}
 
+<style> 
+/* 1. Force the containers to fill the entire width */
+.masthead, 
+.masthead__inner-wrap, 
+.masthead__menu {
+  width: 100% !important;
+  max-width: none !important; /* This removes the "short" limitation */
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* 2. Synchronize the Nav with Content Padding */
+.greedy-nav {
+  width: 100% !important;
+  display: flex !important;
+  /* We use 0 padding here to keep the JS math clean */
+  padding: 0 !important; 
+}
+
+/* 3. Align the Site Title with the Sidebar/Content edge */
+.masthead__menu-item--lg {
+  padding-left: 20px !important; /* Matches your sidebar 20px offset */
+}
+
+/* 4. Align the Navicon/Toggle with the right Content edge */
+.greedy-nav__toggle {
+  padding-right: 20px !important; 
+  margin-left: auto !important;
+  flex-shrink: 0 !important;
+}
+
+</style>
+
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
