@@ -56,32 +56,32 @@
   }
 </style>
 
-<div class="masthead" style="width: 100%; border-bottom: 1px solid #1b1b1b; box-sizing: border-box;">
-  <div class="masthead__inner-wrap" style="max-width: none !important; margin: 0 !important; padding: 0 20px !important; width: 100% !important; box-sizing: border-box !important;">
-    <div class="masthead__menu" style="max-width: none !important; margin: 0 !important;">
-      
-      <nav id="site-nav" class="greedy-nav" style="display: flex; justify-content: space-between; align-items: center; white-space: nowrap; position: relative;">
+{% include base_path %}
+
+<div class='masthead' style='display: block !important; width: 100% !important; max-width: none !important; margin: 0 !important; padding: 0 20px !important; border-bottom: 1px solid #1b1b1b; box-sizing: border-box;'>
+  
+  <div class='masthead__inner-wrap' style='display: block !important; width: 100% !important; max-width: none !important; margin: 0 !important; padding: 0 20px !important; box-sizing: border-box !important;'>
+    
+    <div class='masthead__menu' style='width: 100%;'>
+      <nav id='site-nav' class='greedy-nav' style='display: flex; align-items: center; justify-content: space-between;'>
         
-        <ul class="visible-links" style="display: flex; list-style: none; margin: 0; padding: 0 20px; align-items: center;">
-          <li class="masthead__menu-item masthead__menu-item--lg" style="margin-right: 20px;">
-            <a href="{{ base_path }}/" style="font-weight: bold; text-decoration: none; color: #1b1b1b;">{{ site.title }}</a>
+        <ul class='visible-links' style='display: flex; list-style: none; margin: 0; padding: 0; align-items: center;'>
+          <li class='masthead__menu-item masthead__menu-item--lg'>
+            <a href='{{ base_path }}/' style='font-weight: bold; text-decoration: none; color: #1b1b1b;'>{{ site.title }}</a>
           </li>
-          
           {% for link in site.data.navigation.main %}
-            <li class="masthead__menu-item">
-              <a href="{{ base_path }}{{ link.url }}" style="text-decoration: none; color: #1b1b1b; margin-left: 15px;">{{ link.title }}</a>
+            <li class='masthead__menu-item'>
+              <a href='{{ base_path }}{{ link.url }}' style='text-decoration: none; color: #1b1b1b; margin-left: 15px;'>{{ link.title }}</a>
             </li>
           {% endfor %}
         </ul>
 
-        <button class="greedy-nav__toggle hidden" type="button" style="background: none; border: none; padding: 0; cursor: pointer; margin-left: auto; width: 20px; height: 20px; position: relative; z-index: 20;">
-          <span class="visually-hidden">{{ site.data.ui-text[site.locale].menu_label | default: "Toggle Menu" }}</span>
-          <div class="navicon"></div>
+        <button class='greedy-nav__toggle hidden' type='button' style='background: none; border: none; padding: 0; cursor: pointer; margin-left: auto;'>
+          <div class='navicon'></div>
         </button>
 
-        <ul class="hidden-links hidden"></ul>
+        <ul class='hidden-links hidden'></ul>
       </nav>
-      
     </div>
   </div>
 </div>
