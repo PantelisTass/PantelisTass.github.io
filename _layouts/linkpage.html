@@ -9,39 +9,62 @@ layout: default
 </script>
 
 <style>
-  /* Force the body and main container to ignore default theme constraints */
-  body { margin: 0 !important; padding: 0 !important; }
-  #main { max-width: none !important; padding: 0 !important; margin: 0 !important; width: 100% !important; }
+  /* 1. Remove theme restrictions and white patches */
+  #main {
+    max-width: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    /* Changed to auto so it doesn't force extra white space on short pages */
+    min-height: auto !important; 
+  }
 
-  /* Uniform Link Appearance (Excluding masthead) */
-  .post-content a, .post-header a {
-    color: #494e52 !important; /* Standard theme grey-black */
+  /* 2. Style the EXISTING theme footer to be full-width and aligned */
+  .page__footer {
+    float: left;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 20px 0 !important;
+    border-top: 1px solid #000 !important;
+  }
+
+  .page__footer-innerptr {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  /* 3. Standard Text Alignment */
+  .post-header, .post-content {
+    max-width: 1280px;
+    margin: 0 auto !important;
+    padding: 20px !important;
+  }
+
+  .post-header { padding-top: 100px !important; }
+
+  /* 4. Uniform Links */
+  .post-content a {
+    color: #494e52 !important;
     text-decoration: none !important;
     border-bottom: 1px solid #ccc;
-    transition: all 0.2s ease;
   }
-  .post-content a:hover, .post-header a:hover {
-    color: #000 !important;
-    border-bottom-color: #000;
-  }
-  
-  /* Prevent image links from having underscores */
-  .post-content a img { border: none !important; display: block; }
 </style>
 
-<div id="main" role="main" style="display: flex; flex-direction: column; min-height: 100vh;">
 
-  <article class="post" style="flex: 1 0 auto; width: 100%; margin: 0; padding: 0 20px; display: flex; flex-direction: column;">
+
+<div id="main" role="main">
+  <article class="post">
     
-    <header class="post-header" style="max-width: none; padding: 100px 20px 0 20px; margin-bottom: 0;">
-      <h1 class="post-title" style="margin: 0; padding: 0; border: none; line-height: 1.1;">{{ page.title }}</h1>
+    <header class="post-header">
+      <h1 class="post-title" style="margin: 0; border: none; line-height: 1.1;">{{ page.title }}</h1>
       {% if page.description %}
-        <p class="page-intro" style="margin-top: 10px; color: #666;">{{ page.description }}</p>
+        <p style="margin-top: 10px; color: #666;">{{ page.description }}</p>
       {% endif %}
+      <div style="height: 1px; margin-top: 20px; width: 100%; background: #eee;"></div>
     </header>
 
-    <div class="post-content" style="padding: 20px 20px; margin-top: 0; flex-grow: 1;">
-      
+    <div class="post-content">
       {% if page.target %}
         <div style="margin-bottom: 30px;">
           <a href="{{ page.target }}" style="font-weight: bold;">Click here to view</a>
@@ -51,7 +74,7 @@ layout: default
       {% if page.image_link %}
         <figure style="margin: 0 0 30px 0;">
           <a href="{{ page.image_url }}" style="border: none !important;">
-            <img src="{{ page.image_link | relative_url }}" style="width: 45%; height: auto; max-width: 800px;">
+            <img src="{{ page.image_link | relative_url }}" style="width: 45%; min-width: 280px; height: auto;">
           </a>
         </figure>
       {% endif %}
@@ -61,16 +84,7 @@ layout: default
           {{ page.extra_html | markdownify }}
         </div>
       {% endif %}
-      
     </div>
   </article>
-
-  <footer class="page__footer" style="width: 100%; margin: 0; border-top: 1px solid #000; background: inherit;">
-    <div style="padding: 20px 20px; text-align: left;">
-      <span style="font-size: 0.9em; color: #000;">
-        &copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}
-      </span>
-    </div>
-  </footer>
-
-</div>
+  
+  </div>

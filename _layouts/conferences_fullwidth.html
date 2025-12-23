@@ -4,42 +4,97 @@ layout: default
 
 {% include base_path %}
 
-<div id="main" role="main" style="max-width:none; padding: 0; margin: 0; width: 100%; display: flex; flex-direction: column; min-height: 100vh;">
+<script type="text/javascript" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
+<style>
+  /* 1. Global Background and Sizing Fix */
+  html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: #fafafa; /* Change this to your theme's specific grey/off-white */
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal jitter on mobile */
+  }
+
+  * { 
+    box-sizing: border-box; /* Crucial for mobile padding */
+  }
+
+  #main {
+    max-width: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: inherit;
+  }
+
+  /* 2. Text Wrapping and Link Uniformity */
+  .post-title, .conf-title, .conf-excerpt {
+    overflow-wrap: break-word; /* Prevents text from cutting off */
+    word-wrap: break-word;
+    hyphens: auto;
+  }
+
+  .post-content a, .post-header a, .material-link a {
+    color: #494e52 !important;
+    text-decoration: none !important;
+    border-bottom: 1px solid #ccc;
+    transition: all 0.2s ease;
+  }
+
+  .post-content a:hover, .post-header a:hover, .material-link a:hover {
+    color: #000 !important;
+    border-bottom-color: #000;
+  }
+
+  /* 3. Mobile Adjustments */
+  @media (max-width: 600px) {
+    .post-header { padding-top: 80px !important; } /* Less gap for smaller screens */
+    .material-link { flex: 0 0 100% !important; } /* Stack links on mobile */
+  }
+</style>
+
+
+
+<div id="main" role="main">
 
   <article class="post" style="flex: 1 0 auto; width: 100%; margin: 0; display: flex; flex-direction: column;">
     
-    <header class="post-header" style="max-width: none; padding: 60px 20px 0 20px; margin-bottom: 0;">
-      <h1 class="post-title" style="margin: 0; padding: 0; border: none; line-height: 1.1;">{{ page.title }}</h1>
+    <header class="post-header" style="width: 100%; padding: 100px 20px 0 20px;">
+      <h1 class="post-title" style="margin: 0; padding: 0; border: none; line-height: 1.1; font-size: 2em;">{{ page.title }}</h1>
       
       {% if page.page_intro %}
         <p class="page-intro" style="margin-top: 10px; margin-bottom: 0; color: #666;">{{ page.page_intro }}</p>
       {% endif %}
-      
-      <div style="height: 1px; margin-top: 10px; width: 100%;"></div>
-    </header>
+          </header>
 
-    <div class="post-content" style="padding: 20px 20px; margin-top: 0; flex-grow: 1;">
-      <div class="classes-container" style="padding-top: 10px; padding-bottom: 40px;">
+    <div class="post-content" style="padding: 20px 20px; flex-grow: 1;">
+      <div class="classes-container" style="padding-top: 10px; padding-bottom: 50px;">
         
         {% assign confs = site.conferences | sort: "date" | reverse %}
         {% for conf in confs %}
           <div class="publication-card" style="margin-bottom: 40px; border-left: 4px solid #eee; padding-left: 20px;">
-            <div class="conf-meta" style="font-size: 0.9em; color: #666;">
+            <div class="conf-meta" style="font-size: 0.85em; color: #666;">
               <span class="conf-year">{{ conf.date | date: "%Y" }}</span>
               {% if conf.venue %} • <span class="conf-venue">{{ conf.venue }}</span>{% endif %}
               {% if conf.location %} • <span class="conf-loc">{{ conf.location }}</span>{% endif %}
             </div>
 
-            <h2 class="conf-title" style="margin-top: 5px; margin-bottom: 10px; border: none; font-size: 1.5em;">{{ conf.title }}</h2>
+            <h2 class="conf-title" style="margin-top: 5px; margin-bottom: 10px; border: none; font-size: 1.4em; line-height: 1.2;">{{ conf.title }}</h2>
             
             {% if conf.excerpt %}
-              <p class="conf-excerpt" style="margin-bottom: 15px; line-height: 1.6;">{{ conf.excerpt }}</p>
+              <p class="conf-excerpt" style="margin-bottom: 15px; line-height: 1.5; font-size: 0.95em;">{{ conf.excerpt }}</p>
             {% endif %}
 
             {% if conf.pdfs %}
-              <div class="teach-links" style="display: flex; flex-wrap: wrap; gap: 15px; margin-top: 15px;">
+              <div class="teach-links" style="display: flex; flex-wrap: wrap; gap: 10px 20px; margin-top: 15px;">
                 {% for item in conf.pdfs %}
-                  <div class="material-link" style="flex: 0 0 auto; min-width: fit-content;">
+                  <div class="material-link">
                     <a href="{{ item.file | relative_url }}" style="font-weight: bold;">{{ item.title }}</a>
                   </div>
                 {% endfor %}
@@ -51,9 +106,9 @@ layout: default
     </div>
   </article>
 
-  <footer class="page__footer" style="width: 100%; flex-shrink: 0; margin: 0; border-top: 1px solid #f2f2f2; background: inherit;">
+  <footer class="page__footer" style="width: 100%; border-top: 1px solid #f2f2f2; background: inherit; margin-top: auto;">
     <div style="padding: 20px 20px; text-align: left;">
-      <span style="font-size: 0.9em; color: #090909;">&copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}</span>
+      <span style="font-size: 0.85em; color: #090909;">&copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}</span>
     </div>
   </footer>
 </div>
