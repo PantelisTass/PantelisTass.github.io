@@ -1,88 +1,76 @@
 ---
-layout: compress
+layout: default
 ---
 
 {% include base_path %}
 
-<!doctype html>
-<html lang="{{ site.locale | slice: 0,2 }}">
-  <head>
-    <meta name="description" content="In these pages I add some additional description and links to various documents the interested reader can check out.">
-    {% include head.html %}
-    {% include head/custom.html %}
-    <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
-    <script type="text/javascript" async
-      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-    </script>
-  </head>
+<script type="text/javascript" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
 
-  <body class="{{ page.body_class }}">
-    {% include browser-upgrade.html %}
-    {% include masthead.html %}
+<style>
+  /* Force the body and main container to ignore default theme constraints */
+  body { margin: 0 !important; padding: 0 !important; }
+  #main { max-width: none !important; padding: 0 !important; margin: 0 !important; width: 100% !important; }
 
-    <div id="main" role="main" style="max-width:none; padding: 0; width: 100%; display: flex; flex-direction: column; min-height: 100vh;">
+  /* Uniform Link Appearance (Excluding masthead) */
+  .post-content a, .post-header a {
+    color: #494e52 !important; /* Standard theme grey-black */
+    text-decoration: none !important;
+    border-bottom: 1px solid #ccc;
+    transition: all 0.2s ease;
+  }
+  .post-content a:hover, .post-header a:hover {
+    color: #000 !important;
+    border-bottom-color: #000;
+  }
+  
+  /* Prevent image links from having underscores */
+  .post-content a img { border: none !important; display: block; }
+</style>
+
+<div id="main" role="main" style="display: flex; flex-direction: column; min-height: 100vh;">
+
+  <article class="post" style="flex: 1 0 auto; width: 100%; margin: 0; padding: 0 20px; display: flex; flex-direction: column;">
+    
+    <header class="post-header" style="max-width: none; padding: 100px 20px 0 20px; margin-bottom: 0;">
+      <h1 class="post-title" style="margin: 0; padding: 0; border: none; line-height: 1.1;">{{ page.title }}</h1>
+      {% if page.description %}
+        <p class="page-intro" style="margin-top: 10px; color: #666;">{{ page.description }}</p>
+      {% endif %}
+    </header>
+
+    <div class="post-content" style="padding: 20px 20px; margin-top: 0; flex-grow: 1;">
       
-      <article class="post" style="flex: 1 0 auto; width: 100%;">
-        
-        <header class="post-header" style="max-width: none; padding: 60px 20px 0 20px; margin-bottom: 0;">
-          <h1 class="post-title" style="margin: 0; padding: 0; border: none; line-height: 1.1;">{{ page.title }}</h1>
-          {% if page.description %}
-            <p class="page-intro" style="margin-top: 10px; margin-bottom: 0; color: #666;">{{ page.description }}</p>
-          {% endif %}
-          
-          <div style="height: 1px; margin-top: 20px; width: 100%;"></div>
-        </header>
-
-        <div class="post-content" style="padding: 0 20px; margin-top: 0;">
-          <div style="padding-top: 10px; padding-bottom: 60px;">
-            
-            {% if page.image_link %}
-              <figure class="standard-figure" style="margin: 0 0 30px 0;">
-                <a href="{{ page.image_url }}">
-                  <img src="{{ page.image_link | relative_url }}"
-                      alt="{{ page.title }}"
-                      style="width: 40%; max-width: 900px; height: auto;">
-                </a>
-                {% if page.caption %}
-                  <figcaption class="standard-caption" style="font-size: 0.9em; color: #666; margin-top: 10px;">{{ page.caption }}</figcaption>
-                {% endif %}
-              </figure>
-            {% endif %}
-
-            {% if page.target %}
-              <div class="action-link" style="margin-bottom: 30px;">
-                <a href="{{ page.target }}" style="text-decoration: none; border-bottom: 1px solid;"><strong>Click here to view</strong></a>
-              </div>
-            {% endif %}
-
-            {% if page.image %}
-              <figure class="standard-figure" style="margin: 0 0 30px 0;">
-                  <img src="{{ page.image | relative_url }}" 
-                      alt="{{ page.title }}"
-                      style="max-width: 100%; height: auto;"> 
-                  {% if page.caption %}
-                    <figcaption class="standard-caption" style="font-size: 0.9em; color: #666; margin-top: 10px;">{{ page.caption }}</figcaption>
-                  {% endif %}
-              </figure>
-            {% endif %}
-
-            {% if page.extra_html %}
-              <div class="extra-content">
-                {{ page.extra_html | markdownify }}
-              </div>
-            {% endif %}
-
-          </div>
+      {% if page.target %}
+        <div style="margin-bottom: 30px;">
+          <a href="{{ page.target }}" style="font-weight: bold;">Click here to view</a>
         </div>
-      </article>
+      {% endif %}
 
-      <footer class="page__footer" style="width: 100%; flex-shrink: 0; margin: 0; border-top: 1px solid #f2f2f2;">
-        <div style="padding: 20px 20px; text-align: left;">
-          <span style="font-size: 0.9em; color: #090909;">&copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}</span>
+      {% if page.image_link %}
+        <figure style="margin: 0 0 30px 0;">
+          <a href="{{ page.image_url }}" style="border: none !important;">
+            <img src="{{ page.image_link | relative_url }}" style="width: 45%; height: auto; max-width: 800px;">
+          </a>
+        </figure>
+      {% endif %}
+
+      {% if page.extra_html %}
+        <div class="extra-content">
+          {{ page.extra_html | markdownify }}
         </div>
-      </footer>
+      {% endif %}
+      
     </div>
+  </article>
 
-    {% include scripts.html %}
-  </body>
-</html>
+  <footer class="page__footer" style="width: 100%; margin: 0; border-top: 1px solid #000; background: inherit;">
+    <div style="padding: 20px 20px; text-align: left;">
+      <span style="font-size: 0.9em; color: #000;">
+        &copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}
+      </span>
+    </div>
+  </footer>
+
+</div>

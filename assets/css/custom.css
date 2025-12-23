@@ -338,7 +338,7 @@ body.classes-page {
   min-height: 100%; /* cover the full viewport height */
   background-image: url('/assets/images/penrose-tiling-1.png');
   background-repeat: repeat;          /* tile */
-  background-size: auto;              /* default tiling */
+  background-size: 200px 200px;             /* default tiling */
   background-attachment: fixed;       /* optional */
   background-color: #fefefe;          /* fallback */
   margin: 0;
@@ -352,7 +352,8 @@ body.classes-page {
 body.teaching-page {
   /* Background layers: color first, then ink blot image */
   background-image: url('/assets/images/tiling.png'); 
-  background-size: cover;              /* default tiling */
+  background-size: 150px 150px;            /* default tiling */
+  background-repeat: repeat;    
   background-color: #fefefe;          /* fallback */
   background-attachment: fixed;
 }
@@ -371,6 +372,6 @@ a:hover {
 body.conference-page {
   background-image: url('/assets/images/square-painting.png');
   background-repeat: repeat;
-  background-size: 150px 150px;
+  background-size: 10px 10px;
   background-attachment: fixed;
 }
