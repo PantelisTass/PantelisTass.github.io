@@ -1,69 +1,109 @@
-/* --- UNIVERSAL FIX: HEIGHT & SPACING --- */
 
+/* 1. Align the main content wrapper with the masthead */
 #main {
-  display: flex !important;
-  flex-direction: column !important;
-  margin: 0 !important; 
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  margin-bottom: -80px !important;
   max-width: none !important;
   width: 100% !important;
-  padding: 0 !important;
-  min-height: 100vh !important;
+  /* This creates the 20px 'gutter' that matches your menu */
+  padding-left: 20px !important; 
+  padding-bottom: 0px !important;
+
+  min-height: calc(100vh - 180px) !important;
   box-sizing: border-box !important;
 }
 
-/* 1. OUTER PAGE: BACKGROUND & ALIGNMENT */
+/* OUTER PAGE – full viewport background */
 .page {
-  flex: 1 0 auto;
   display: flex;
   flex-direction: column;
-  padding: 2rem 20px;
+  border-radius: 12px;
+  padding: 2rem;
   box-sizing: border-box;
+
   background: linear-gradient(
-      rgba(255, 255, 255, 0.5), 
+      rgba(255, 255, 255, 0.5), /* white overlay with 50% opacity */
       rgba(255, 255, 255, 0.5)
     ),
     url('/assets/images/abstract-art.jpg') repeat;
   background-size: cover;
 }
 
-/* 2. INNER CARD */
+
+/* INNER CARD – soft white paper */
 .page__inner-wrap {
-  background: rgba(255, 255, 255, 0.85);
+  background: rgb(255, 255, 255, 0.85); /* semi-transparent white */
   border-radius: 12px;
   padding: 2rem;
-  margin: 0 auto 50px auto; 
+  margin: auto 0;                  /* vertically center on tall screens */
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  max-width: 1200px;
+  box-sizing: border-box;
+  max-width: 1200px;               /* optional, keeps content readable */
   width: 100%;
-  position: relative;
-  z-index: 1; 
 }
 
-/* 3. SIDEBAR: THE "SWEET SPOT" ALIGNMENT */
+/* WRAPPER SPACING */
+.wrapper {
+  flex: 1;                         /* fill remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;          /* vertical centering */
+  padding: 5rem 1rem;
+}
+
+/* 1. Normal State: Align the card box with the 20px masthead offset */
 .sidebar {
+  /* This margin matches the 20px padding of your masthead text */
+  margin-left: 0px !important;
+  margin-top: -1px !important; 
+  margin-bottom: px !important; 
+  /* KEEP ORIGINAL LOOK (Colors, padding, and ribbon feel) */
   background: rgba(246, 242, 238, 0.9) !important;
   border-radius: 10px !important;
   padding: 1.5rem !important;
   box-shadow: 0 3px 9px rgba(0,0,0,0.12) !important;
+  /* Ensure the sidebar stays on top of any background tiling */
   position: relative !important;
-  
-  /* LOWERED: Moved from -40px to -18px to clear masthead */
-  margin-top: -18px !important; 
-  margin-bottom: 25px !important;
-  
-  z-index: 10 !important;
+  z-index: 10;
 }
 
-/* 3b. DESKTOP STICKY OFFSET */
+/* 2. Sticky State: Prevent the sidebar from jumping to the far left edge */
 .sidebar.sticky {
-  /* This ensures that when you scroll, it stays below the menu bar */
-  margin-top: 50px !important;
-  padding-top: 50px !important; 
+  /* When sticky, 'left' governs position relative to the viewport */
+  left: -10px !important; 
+  /* Reset margin to avoid double-offsetting when sticky */
+  margin-left: 0 !important;
+  top: -15px !important;
+  bottom: -20px !important;
 }
 
-/* --- MOBILE FIX: CLEAR MASTHEAD & RESET MARGIN --- */
+/* 3. Author Profile Alignment: Ensure internal text hits the card edge */
+.author-profile, 
+.sidebar .nav_list {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+}
 
+.page__footer {
+  margin-top: 0px; /* spacing from content */
+}
+
+/* --- 4. MOBILE ADJUSTMENTS --- */
 @media (max-width: 800px) {
+  #main {
+    /* Pushes sidebar/content down to clear the fixed Masthead/Navicon */
+    padding-top: 50px !important; 
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+
+  .page__inner-wrap {
+    padding: 1.5rem 1rem !important;
+    border-radius: 8px;
+    width: 100%;
+  }
+
   .page {
     /* Safe distance from mobile navicon */
     padding-top: 100px !important; 
@@ -79,16 +119,16 @@
     margin-bottom: 2rem !important;
     top: 0 !important;
   }
+
+  /* 3b. DESKTOP STICKY OFFSET */
+  .sidebar.sticky {
+  /* This ensures that when you scroll, it stays below the menu bar */
+  margin-top: 50px !important;
+  padding-top: 50px !important; 
+  top: 10px;
+  }
 }
 
-/* 4. FOOTER: ORIGINAL COLOUR + BLACK BORDER */
-.page__footer {
-  flex-shrink: 0;
-  width: 100%;
-  border-top: 1px solid #000000 !important;
-  padding: 20px;
-  z-index: 20;
-}
 
 /* Each PDF link on its own line */
 .pdf-link {
@@ -324,7 +364,6 @@ body.classes-page {
   margin: 0;
   padding: 0;
 }
-
 
 body.teaching-page {
   /* Background layers: color first, then ink blot image */
