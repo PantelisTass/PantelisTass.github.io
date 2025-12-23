@@ -24,17 +24,17 @@ layout: compress
       
       <article class="post" style="flex: 1 0 auto; width: 100%;">
         
-        <header class="post-header" style="max-width: none; padding: 40px 20px 0 40px; margin-bottom: 0;">
+        <header class="post-header" style="max-width: none; padding: 60px 20px 0 20px; margin-bottom: 0;">
           <h1 class="post-title" style="margin: 0; padding: 0; border: none; line-height: 1.1;">{{ page.title }}</h1>
           {% if page.description %}
-            <p class="page-intro" style="margin-top: 10px; color: #666;">{{ page.description }}</p>
+            <p class="page-intro" style="margin-top: 10px; margin-bottom: 0; color: #666;">{{ page.description }}</p>
           {% endif %}
           
-          <div style="height: 1px; margin-top: 40px; width: 100%;"></div>
+          <div style="height: 1px; margin-top: 20px; width: 100%;"></div>
         </header>
 
-        <div class="post-content" style="padding: 0 40px; margin-top: 0;">
-          <div style="padding-top: 40px; padding-bottom: 60px;">
+        <div class="post-content" style="padding: 0 20px; margin-top: 0;">
+          <div style="padding-top: 10px; padding-bottom: 60px;">
             
             {% if page.image_link %}
               <figure class="standard-figure" style="margin: 0 0 30px 0;">
@@ -76,9 +76,11 @@ layout: compress
         </div>
       </article>
 
-      <footer class="page__footer" style="width: 100%; flex-shrink: 0; margin: 0; border-top: 1px solid #090909;">
-    <div style="padding: 20px 20px; text-align: left;"><span style="font-size: 0.9em; color: #090909;">&copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}</span></div>
-  </footer>
+      <footer class="page__footer" style="width: 100%; flex-shrink: 0; margin: 0; border-top: 1px solid #f2f2f2;">
+        <div style="padding: 20px 20px; text-align: left;">
+          <span style="font-size: 0.9em; color: #090909;">&copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}</span>
+        </div>
+      </footer>
     </div>
 
     {% include scripts.html %}
