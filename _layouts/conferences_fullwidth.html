@@ -21,22 +21,26 @@ layout: default
     <div class="post-content" style="padding: 20px 20px; margin-top: 0; flex-grow: 1;">
       <div class="classes-container" style="padding-top: 10px; padding-bottom: 40px;">
         
-        {% assign notes = site.classes | sort: "year" | reverse %}
-        {% for note in notes %}
+        {% assign confs = site.conferences | sort: "date" | reverse %}
+        {% for conf in confs %}
           <div class="publication-card" style="margin-bottom: 40px; border-left: 4px solid #eee; padding-left: 20px;">
             <div class="conf-meta" style="font-size: 0.9em; color: #666;">
-              <span class="conf-year">{{ note.date | date: "%Y" }}</span>
-              {% if note.venue %}• <span class="conf-venue">{{ note.venue }}</span>{% endif %}
+              <span class="conf-year">{{ conf.date | date: "%Y" }}</span>
+              {% if conf.venue %} • <span class="conf-venue">{{ conf.venue }}</span>{% endif %}
+              {% if conf.location %} • <span class="conf-loc">{{ conf.location }}</span>{% endif %}
             </div>
 
-            <h2 class="conf-title" style="margin-top: 5px; margin-bottom: 10px; border: none;">{{ note.title }}</h2>
-            {% if note.excerpt %}<p class="conf-excerpt" style="margin-bottom: 15px;">{{ note.excerpt }}</p>{% endif %}
+            <h2 class="conf-title" style="margin-top: 5px; margin-bottom: 10px; border: none; font-size: 1.5em;">{{ conf.title }}</h2>
+            
+            {% if conf.excerpt %}
+              <p class="conf-excerpt" style="margin-bottom: 15px; line-height: 1.6;">{{ conf.excerpt }}</p>
+            {% endif %}
 
-            {% if note.materials %}
+            {% if conf.pdfs %}
               <div class="teach-links" style="display: flex; flex-wrap: wrap; gap: 15px; margin-top: 15px;">
-                {% for item in note.materials %}
-                  <div class="material-link" style="flex: 0 0 calc(25% - 15px); min-width: fit-content;">
-                    <a href="{{ item.file | relative_url }}" style="font-weight: bold; text-decoration: none; border-bottom: 1px solid;">{{ item.title }}</a>
+                {% for item in conf.pdfs %}
+                  <div class="material-link" style="flex: 0 0 auto; min-width: fit-content;">
+                    <a href="{{ item.file | relative_url }}" style="font-weight: bold;">{{ item.title }}</a>
                   </div>
                 {% endfor %}
               </div>

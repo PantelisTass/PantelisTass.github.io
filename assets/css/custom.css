@@ -358,6 +358,15 @@ body.teaching-page {
   background-attachment: fixed;
 }
 
+body.talks-page {
+  /* Background layers: color first, then ink blot image */
+  background-image: url('/assets/images/FourColorMapEx.png');
+  background-size: 200px 200px;            /* default tiling */ 
+  background-repeat: cover;    
+  background-color: #fefefe;          /* fallback */
+  background-attachment: fixed;
+}
+
 /* Darker blue links */
 a {
   color: #003366; /* change to any dark blue hex */
@@ -370,8 +379,7 @@ a:hover {
 }
 
 body.conference-page {
-  background-image: url('/assets/images/square-painting.png');
-  background-repeat: repeat;
-  background-size: 10px 10px;
+  background-image: url('/assets/images/percolation.png');
+  background-repeat: cover;
   background-attachment: fixed;
 }
