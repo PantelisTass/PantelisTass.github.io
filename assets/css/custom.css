@@ -34,17 +34,37 @@
   display: flex;
   flex-direction: column;
   justify-content: center;          /* vertical centering */
-  padding: 5rem 0;
+  padding: 5rem 1rem;
 }
 
-/* MOBILE */
-@media (max-width: 600px) {
-  .page {
-    padding: 1rem;
+/* --- 4. MOBILE ADJUSTMENTS --- */
+@media (max-width: 800px) {
+  #main {
+    /* Pushes sidebar/content down to clear the fixed Masthead/Navicon */
+    padding-top: 50px !important; 
+    padding-left: 15px !important;
+    padding-right: 15px !important;
   }
+
+  .page {
+    padding: 1rem 2rem !important;
+    /* Extra gap on mobile to ensure no footer overlap */
+    margin-bottom: 50px !important; 
+  }
+
   .page__inner-wrap {
-    padding: 1rem;
+    padding: 1.5rem 1rem !important;
     border-radius: 8px;
+    width: 100%;
+  }
+
+  .sidebar {
+    /* Ensure sidebar is not hidden behind masthead */
+    position: relative !important;
+    top: 0 !important;
+    margin-top: 0px !important;
+    margin-bottom: 30px !important;
+    width: 100% !important;
   }
 }
 
@@ -106,7 +126,7 @@
     left: 0 !important;
     width: 100% !important;
     position: relative !important;
-    top: 0 !important;
+    top: 5px !important;
   }
 }
 
@@ -361,7 +381,7 @@ body.teaching-page {
 body.talks-page {
   /* Background layers: color first, then ink blot image */
   background-image: url('/assets/images/FourColorMapEx.png');
-  background-size: 200px 200px;            /* default tiling */ 
+  background-size: 100px 100px;            /* default tiling */ 
   background-repeat: cover;    
   background-color: #fefefe;          /* fallback */
   background-attachment: fixed;
