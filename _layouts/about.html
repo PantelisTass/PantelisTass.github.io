@@ -1,0 +1,125 @@
+
+<style> 
+/* --- 1. GLOBAL LAYOUT ENGINE --- */
+/* Forces the footer to stay below content regardless of content length */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+#main {
+  display: flex !important;
+  flex-direction: column !important;
+  min-height: 100vh !important; /* Full screen height */
+  margin: 0 !important;
+  max-width: none !important;
+  width: 100% !important;
+  padding: 0 20px !important;
+  box-sizing: border-box !important;
+}
+
+/* 2. THE PAGE CONTAINER (The Background) */
+.page {
+  flex: 1 0 auto; /* This pushes the footer down naturally */
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 0;
+  box-sizing: border-box;
+  background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),
+              url('/assets/images/abstract-art.jpg') repeat;
+  background-size: cover;
+}
+
+/* 3. THE INNER CARD (The White Paper) */
+.page__inner-wrap {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 0 auto 40px auto; /* Centered with a safety gap above the footer */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  max-width: 1200px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* 4. SIDEBAR POSITIONING */
+.sidebar {
+  background: rgba(246, 242, 238, 0.9) !important;
+  border-radius: 10px !important;
+  padding: 1.5rem !important;
+  box-shadow: 0 3px 9px rgba(0,0,0,0.12) !important;
+  position: relative !important;
+  z-index: 10;
+  margin-top: -15px !important; /* Slight ribbon-style lift */
+}
+
+/* 5. FOOTER STYLING */
+.page__footer {
+  flex-shrink: 0; /* Prevents footer from collapsing into content */
+  width: 100%;
+  background: #fff;
+  border-top: 1px solid #000000 !important; /* Requested black border */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* 6. MOBILE RESPONSIVENESS */
+@media (max-width: 800px) {
+  #main {
+    /* Large top padding to push content BELOW the fixed mobile masthead */
+    padding-top: 100px !important; 
+  }
+
+  .page {
+    padding: 1rem 0 !important;
+  }
+
+  .page__inner-wrap {
+    padding: 1.5rem 1rem !important;
+    margin-bottom: 20px !important;
+  }
+
+  .sidebar {
+    width: 100% !important;
+    margin-top: 0 !important; /* No negative margin on mobile to avoid overlaps */
+    margin-bottom: 25px !important;
+    position: relative !important;
+    top: 0 !important;
+  }
+}
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Your Name</title>
+    <link rel="stylesheet" href="custom.css">
+</head>
+<body class="about-page">
+    <div id="main" role="main">
+        <div class="sidebar">
+            <div class="author-profile">
+                <h3>Your Name</h3>
+                <p>Your Title / Bio</p>
+            </div>
+        </div>
+
+        <article class="page">
+            <div class="page__inner-wrap">
+                <header>
+                    <h1 class="page__title">About Me</h1>
+                </header>
+                <section class="page__content">
+                    <p>Insert your professional background, research interests, and personal details here.</p>
+                </section>
+            </div>
+        </article>
+    </div>
+
+    <footer class="page__footer">
+        &copy; 2024 Your Name. Powered by Jekyll.
+    </footer>
+</body>
+</html>

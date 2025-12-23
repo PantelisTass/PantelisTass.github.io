@@ -3,7 +3,7 @@
 #main {
   margin-left: 0 !important;
   margin-right: 0 !important;
-  margin-bottom: -80px !important;
+  margin-bottom: 0px !important;
   max-width: none !important;
   width: 100% !important;
   /* This creates the 20px 'gutter' that matches your menu */
@@ -29,7 +29,6 @@
     url('/assets/images/abstract-art.jpg') repeat;
   background-size: cover;
 }
-
 
 /* INNER CARD – soft white paper */
 .page__inner-wrap {
@@ -71,11 +70,11 @@
 /* 2. Sticky State: Prevent the sidebar from jumping to the far left edge */
 .sidebar.sticky {
   /* When sticky, 'left' governs position relative to the viewport */
-  left: -10px !important; 
+  left: 0px !important; 
   /* Reset margin to avoid double-offsetting when sticky */
   margin-left: 0 !important;
-  top: -15px !important;
-  bottom: -20px !important;
+  top: 5px !important;
+  bottom: 20px !important;
 }
 
 /* 3. Author Profile Alignment: Ensure internal text hits the card edge */
