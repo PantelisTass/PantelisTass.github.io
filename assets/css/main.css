@@ -1,0 +1,69 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+nav a {
+  margin-right: 15px;
+  text-decoration: none;
+  color: #003366;
+  font-weight: bold;
+}
+
+main {
+  margin-top: 2rem;
+}
+
+/* Ensure MathJax equations don't overflow on mobile */
+.mjx-chtml {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.item {
+  /* Increased from 1.5rem to 2.5rem for more "breathing room" */
+  margin-bottom: 2.5rem; 
+  padding-left: 10px;
+  /* Optional: adds a very faint separator line between papers */
+  padding-bottom: 0.5rem;
+}
+
+/* Removes the extra gap/line from the very last item in the list */
+.pub-item:last-child {
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+/* --- Floating Profile Image --- */
+.profile-pic {
+  float: right;
+  width: 220px;          /* Adjust width as needed */
+  height: auto;
+  margin-left: 20px;    /* Space between text and image */
+  margin-bottom: 15px;  /* Space below image */
+  border-radius: 8px;   /* Optional: rounded corners */
+  border: 1px solid rgba(0,0,0,0.1);
+}
+
+/* --- Drop Cap (The Big Letter) --- */
+.drop-cap {
+  float: left;
+  font-size: 3.5rem;     /* Size of the first letter */
+  line-height: 0.8;      /* Keeps it aligned with top of text */
+  margin-right: 8px;     /* Space after the letter */
+  margin-top: 4px;
+  font-weight: bold;
+  color: black;        /* Your academic blue color */
+}
+
+/* --- Clearfix --- */
+/* This prevents the card from collapsing if the image is taller than text */
+.content-card::after {
+  content: "";
+  clear: both;
+  display: table;
+}

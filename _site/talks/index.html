@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Talks | Pantelis Tassopoulos</title>
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+  </script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+  <header class="masthead">
+    <nav class="nav-inner">
+      <a href="/">Home</a>
+      <a href="/publications/">Publications</a>
+      <a href="/teaching/">Teaching</a>
+      <a href="/notes/">Notes</a>
+      <a href="/files/resume.pdf">Vitae</a>
+      <a href="/talks/">Talks</a>
+      <a href="/conferences/">Conferences</a>
+    </nav>
+  </header>
+
+  <main id="main-container">
+    <div class="content-card">
+  <h1>Talks</h1>
+
+  <link rel="stylesheet" href="/leaflet/leaflet.css" />
+  <script src="/leaflet/leaflet.js"></script>
+
+        <style>
+          /* Map dimensions and style */
+          #map { 
+            height: 600px; 
+            width: 100%; 
+            border-radius: 4px; /* Slightly reduced to match standard card aesthetic */
+            border: 1px solid #eee; 
+            z-index: 1; /* Ensures map stays below certain navigation elements if necessary */
+          }
+        </style>    
+        
+        <div id="map"></div>
+
+        <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          var map = L.map('map').setView([20, 0], 2);
+          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+          }).addTo(map);
+
+          const talks = [
+            {
+              title: "19th Panhellenic conference in mathematical analysis",
+              venue: "National Technical University, Athens Greece",
+              lat: 37.97849,
+              lng: 23.785228
+            }
+          ];
+
+          talks.forEach(t => {
+            L.marker([t.lat, t.lng])
+              .addTo(map)
+              .bindPopup("<strong>" + t.title + "</strong><br>" + t.venue);
+          });
+        });
+        </script>
+</div>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Pantelis Tassopoulos</p>
+  </footer>
+
+</body>
+</html>

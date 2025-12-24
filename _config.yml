@@ -1,0 +1,11 @@
+title: Pantelis Tassopoulos
+email: your-email@cam.ac.uk
+description: PhD Student in Probability Theory
+baseurl: "" 
+url: "https://yourusername.github.io"
+
+# Build settings
+theme: null # We are building from scratch for minimalism
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
