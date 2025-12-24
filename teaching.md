@@ -24,7 +24,7 @@ permalink: /teaching/
         Imperial College London, Department of Mathematics (2022–2023). <br>
         In Fall 2022 and Spring 2023, I was a teaching assistant for undergraduate mathematics courses, conducting demonstrations and coordinating problem-solving sessions.
     </div>
-    <a href="/materials/Imperial-calc-2023">[Calculus and Applications (Spring 2023)]</a><br>
+    <a href="/materials/imperial-calc-2023/">[Calculus and Applications (Spring 2023)]</a><br>
     <a href="/materials/Imperial-analysis-1-2022">[Analysis 1 (Fall 2022)]</a>
 </div>
   </div>
