@@ -15,6 +15,12 @@ permalink: /notes/
     <a href="/files/Advanced Mathematics Courses List.pdf">[List of all classes with syllabi taken during my undergraduate studies at Imperial and masters studies at Cambridge (2020-2024)]</a>
     </div>
 
+     <div class="item">
+    <div class="title"><strong>Cambridge PhD (2024-)</strong></div>
+    <a href="/files/L4-legall brownian snake.pdf">[Notes on the Brownian snake (2025)]</a><br>
+    <a href="/files/Random_Matrix_Theory_Lecture.pdf">[Notes on random matrices (2024)]</a><br>
+    </div>
+
     <div class="item">
     <div class="title"><strong>Part III Cambridge (2023-2024)</strong></div>
     <a href="/files/Part_III_Functional_Analysis_Michaelmas_2023.pdf">[Functional Analysis (2023)]</a><br>
