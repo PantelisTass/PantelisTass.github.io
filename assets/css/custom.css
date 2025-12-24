@@ -15,25 +15,18 @@
   box-sizing: border-box !important;
 }
 
-/* OUTER PAGE – full viewport background */
-.page {
-  display: flex;
-  flex-direction: column;
-  border-radius: 12px;
-  padding: 2rem;
-  box-sizing: border-box;
-
-  background: linear-gradient(
-      rgba(255, 255, 255, 0.5), /* white overlay with 50% opacity */
-      rgba(255, 255, 255, 0.5)
-    ),
-    url('/assets/images/abstract-art.jpg') repeat;
+/* 1. PAGE BACKGROUND (About Page Specific) */
+body.about-page {
+  background-image: url('/assets/images/abstract-art.jpg') !important;
+  background-repeat: repeat;
+  background-attachment: fixed;
   background-size: cover;
 }
 
+
 /* INNER CARD – soft white paper */
 .page__inner-wrap {
-  background: rgb(255, 255, 255, 0.85); /* semi-transparent white */
+  background: rgb(255, 255, 255, 0.65); /* semi-transparent white */
   border-radius: 12px;
   padding: 2rem;
   margin: auto 0;                  /* vertically center on tall screens */
@@ -52,26 +45,10 @@
   padding: 5rem 1rem;
 }
 
-/* 1. Normal State: Align the card box with the 20px masthead offset */
-.sidebar {
-  /* This margin matches the 20px padding of your masthead text */
-  margin-left: 0px !important;
-  margin-top: 20px !important; 
-  margin-bottom: 20px !important; 
-  /* KEEP ORIGINAL LOOK (Colors, padding, and ribbon feel) */
-  background: rgba(246, 242, 238, 0.9) !important;
-  border-radius: 10px !important;
-  padding: 1.5rem !important;
-  box-shadow: 0 3px 9px rgba(0,0,0,0.12) !important;
-  /* Ensure the sidebar stays on top of any background tiling */
-  position: relative !important;
-  z-index: 10;
-}
-
 /* 2. Sticky State: Prevent the sidebar from jumping to the far left edge */
 .sidebar.sticky {
   /* When sticky, 'left' governs position relative to the viewport */
-  left: 0px !important; 
+  left: 40px !important; 
   /* Reset margin to avoid double-offsetting when sticky */
   margin-left: 0 !important;
   top: 5px !important;
@@ -91,48 +68,35 @@
 
 /* --- 4. MOBILE ADJUSTMENTS --- */
 @media (max-width: 800px) {
+
+  html {
+    /* Fixed background can be glitchy on mobile, 'scroll' is safer */
+    background-attachment: scroll; 
+  }
+
   #main {
-    /* Pushes sidebar/content down to clear the fixed Masthead/Navicon */
-    padding-top: 50px !important; 
-    padding-left: 15px !important;
-    padding-right: 15px !important;
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+    padding-top: 80px !important; /* Space for the mobile navicon */
   }
 
   .page__inner-wrap {
-    padding: 1.5rem 1rem !important;
+    padding: 1.5rem !important;
+    margin-top: 10px !important;
     border-radius: 8px;
-    width: 100%;
+    /* Increase opacity slightly for readability on small screens */
+    background: rgba(255, 255, 255, 0.85) !important; 
   }
-
-  .page {
-    /* Safe distance from mobile navicon */
-    padding-top: 100px !important; 
-    padding-left: 15px !important;
-    padding-right: 15px !important;
-  }
-
-  .sidebar {
-  /* This margin matches the 20px padding of your masthead text */
-  margin-left: 0px !important;
-  margin-top: 20px !important; 
-  margin-bottom: 20px !important; 
-  /* KEEP ORIGINAL LOOK (Colors, padding, and ribbon feel) */
-  background: rgba(246, 242, 238, 0.9) !important;
-  border-radius: 10px !important;
-  padding: 1.5rem !important;
-  box-shadow: 0 3px 9px rgba(0,0,0,0.12) !important;
-  /* Ensure the sidebar stays on top of any background tiling */
-  position: relative !important;
-  z-index: 10;
-}
 
   /* 3b. DESKTOP STICKY OFFSET */
   .sidebar.sticky {
   /* This ensures that when you scroll, it stays below the menu bar */
-  margin-top: 50px !important;
-  padding-top: 50px !important; 
-  top: 10px;
+  margin-top: 0px !important;
+  padding-top: 0px !important; 
+  margin-right: 0px !important; 
+  margin-left: 0px !important; 
   }
+
 }
 
 
