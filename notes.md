@@ -18,7 +18,7 @@ permalink: /notes/
      <div class="item">
     <div class="title"><strong>Cambridge PhD (2024-)</strong></div>
     <a href="/files/L4-legall brownian snake.pdf">[Notes on the Brownian snake (2025)]</a><br>
-    <a href="/files/Random_Matrix_Theory_Lecture.pdf">[Notes on random afc  matrices (2024)]</a><br>
+    <a href="/files/Random_Matrix_Theory_Lecture.pdf">[Notes on random matrices (2024)]</a><br>
     </div>
 
     <div class="item">
