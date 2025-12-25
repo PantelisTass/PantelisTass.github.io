@@ -20,5 +20,5 @@ title: Home
 
   <p>My interests more generally are in Stochastic analysis, Stochastic Partial Differential Equations, Random Geometry and Statistical Mechanics.</p>
 
-  <p><strong>Mentors:</strong> Dr. Sourav Sarkar, Dr. Paul Russell, Professor Perla Sousi, Professor Gregorios Pavliotis, Dr. Ajay Chandra, Dr. Pierre-Francois Rodriguez, Professor Igor Krasovsky and Professor Jonathan Mestel.</p>
+  <p><strong>Mentors:</strong> Dr. Sourav Sarkar, Professor Perla Sousi, Dr. Paul Russell, Professor Gregorios Pavliotis, Dr. Ajay Chandra, Dr. Pierre-Francois Rodriguez, Professor Igor Krasovsky and Professor Jonathan Mestel.</p>
 </div>
