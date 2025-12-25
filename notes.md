@@ -26,7 +26,7 @@ permalink: /notes/
     <a href="/files/Part_III_Functional_Analysis_Michaelmas_2023.pdf">[Functional Analysis (2023)]</a><br>
     <a href="/files/Part_III_Advanced_Probability_Michaelmas_2023.pdf">[Advanced Probability (2023)]</a><br>
     <a href="/files/Elliptic%20PDEs.pdf">[Elliptic PDEs]</a><br>
-    <a href="/files/Stochastic%20Calculus%20handrwitten%20notes.pdf">[Stochastic Calculus and handwritten notes]</a><br>
+    <a href="/files/Stochastic%20Calculus%20handrwitten%20notes.pdf">[Stochastic Calculus handwritten notes]</a><br>
     <a href="/files/Analysis of PDE.pdf">[Analysis of PDE]</a><br>
     <a href="/files/Distribution%20Theory.pdf">[Distribution Theory]</a><br>
     <a href="/files/Concentration%20Inequalities.pdf">[Concentration Inequalities]</a>
