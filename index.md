@@ -9,7 +9,7 @@ title: Home
   <img src="/images/bio-pic-1.png" class="profile-pic" alt="Pantelis Tassopoulos">
 
   <p class="intro-text">
-    <span class="drop-cap">M</span>y name is <strong>Pantelis Tassopoulos</strong>, and I am currently pursuing a PhD in Probability Theory at the <strong>University of Cambridge</strong> (expected completion July 2027), studying a notion of universality encompassing a large class of random growth processes in the plane, namely, KPZ universality, under the supervision of Dr Sourav Sarkar.
+    <span class="drop-cap">M</span>y name is <strong>Pantelis Tassopoulos</strong>, and I am currently pursuing a PhD in Probability Theory at the <strong>University of Cambridge</strong> (expected completion July 2027), studying a notion of universality encompassing a large class of random growth processes in the plane, namely, KPZ universality, under the supervision of Dr. Sourav Sarkar.
   </p>
 
   <p>
