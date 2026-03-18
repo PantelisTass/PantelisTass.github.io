@@ -28,6 +28,9 @@
 <loc>http://localhost:4000/materials/mml-research-2023/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/blog/</loc>
+</url>
+<url>
 <loc>http://localhost:4000/conferences/</loc>
 </url>
 <url>
@@ -206,6 +209,10 @@
 <url>
 <loc>http://localhost:4000/files/Summer_Research_2023.pdf</loc>
 <lastmod>2025-12-24T09:34:00+00:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/files/ideal_gas.pdf</loc>
+<lastmod>2026-03-17T19:29:03+00:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/files/resume.pdf</loc>

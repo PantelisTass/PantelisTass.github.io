@@ -67,3 +67,33 @@ main {
   clear: both;
   display: table;
 }
+
+/* Style the footnote reference in the text */
+.footnote {
+    vertical-align: baseline; /* Brings it down from superscript to text level */
+    font-size: 0.9em;
+    font-weight: 500;
+    margin: 0 2px;
+}
+
+/* Add brackets around the number automatically */
+.footnote::before {
+    content: "[";
+    color: #0366d6; /* GitHub blue */
+}
+
+.footnote::after {
+    content: "]";
+    color: #0366d6;
+}
+
+/* Make the link look like a professional citation */
+a.footnote {
+    text-decoration: none;
+    color: #0366d6;
+}
+
+a.footnote:hover {
+    text-decoration: underline;
+    background-color: #f1f8ff;
+}
