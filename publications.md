@@ -6,6 +6,14 @@ permalink: /publications/
 
 <div class="content-card">
   <h1>Preprints</h1>
+
+  <div class="item">
+    <div class="pub-title">The KPZ fixed point and Brownian motion share the same null sets</div>
+    <div class="pub-citation">P. Tassopoulos and S. Sarkar. Preprint, arXiv:2604.03358, 2026.</div>
+    <div class="pub-links">
+    <a href="https://arxiv.org/pdf/2604.03358">[PDF]</a>
+    </div>
+  </div>
   
   <div class="item">
     <div class="pub-title">Quantitative Brownian regularity of the KPZ fixed point with arbitrary initial data</div>
