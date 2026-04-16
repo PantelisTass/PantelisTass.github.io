@@ -17,6 +17,7 @@ permalink: /notes/
 
      <div class="item">
     <div class="title"><strong>Cambridge PhD (2024-)</strong></div>
+    <a href="/files/GFF_perc_PFR.pdf">[A concise introduction to random walks on weighted graphs and the Gaussian free field as well as percolation on its level sets (2026)]</a><br>
     <a href="/files/L4-legall brownian snake.pdf">[Notes on the Brownian snake (2025)]</a><br>
     <a href="/files/Random_Matrix_Theory_Lecture.pdf">[Notes on random matrices (2024)]</a><br>
     </div>
