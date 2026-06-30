@@ -58,6 +58,14 @@ permalink: /talks/
         lng: 0.1030, 
         // Use a simple path string to avoid Liquid processing errors
         pdf: "/files/Brownian_Regularity_of_the_KPZ_fixed_point_Cambridge__slides.pdf"
+      },
+      {
+        title: "Third Congress of Greek Mathematicians",
+        venue: "National Kapodistrian and Technical Universities of Athens, Athens Greece",
+        lat: 37.9675,
+        lng: 23.785228, 
+        // Use a simple path string to avoid Liquid processing errors
+        pdf: "/files/Brownian_mutual_absolute_continuity_of_the_KPZ_fixed_point__slides_.pdf"
       }
     ];
 
