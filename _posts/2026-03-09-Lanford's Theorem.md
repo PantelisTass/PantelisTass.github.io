@@ -22,7 +22,7 @@ permalink: /posts/2026-03-09-Lanford's Theorem
 
 ## 1. Introduction
 
-Large-scale classical systems, albeit being governed by a set of deterministic laws, are usually computationally intractable and one is naturally inclined to investigate the emergence of a simplified limiting dynamics. In physics this line of inquiry led to the growth of statistical mechanics which has seen a lot of success. However, the connection between classical mechanics and the 'emergent' statistical mechanics has not been rigorously established, until very recently where substantial progress has been made. 
+Large-scale classical systems, albeit being governed by a set of deterministic laws, are usually computationally intractable and one is naturally inclined to investigate the emergence of a simplified limiting dynamics. In physics this line of inquiry led to the growth of statistical mechanics which has seen a lot of success. However, the connection between classical mechanics and the 'emergent' statistical mechanics has not been rigorously established, until very recently. 
 
 We will be interested in the behaviour of a model of an **idealised, dilute gas**, see Figure 1. The 'gas' is comprised of $N\gg 1$ identical particles of diameter $\varepsilon > 0$ in $d(\ge 2)$-dimensional Euclidean space that move freely in a rectilinear fashion until they collide elastically with each other, from time to time.
 
