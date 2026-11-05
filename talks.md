@@ -70,8 +70,8 @@ permalink: /talks/
       {
         title: "Rayleigh-Knight Prize presentation",
         venue: "DPMMS, Cambridge University, United Kingdom",
-        lat: 52.2104,
-        lng: 0.1030, 
+        lat: 52.2105,
+        lng: 0.1031, 
         // Use a simple path string to avoid Liquid processing errors
         pdf: "/files/Panteleimon_Tassopoulos_RK_slides.pdf"
       }
