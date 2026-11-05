@@ -67,6 +67,14 @@ permalink: /talks/
         // Use a simple path string to avoid Liquid processing errors
         pdf: "/files/Brownian_mutual_absolute_continuity_of_the_KPZ_fixed_point__slides_.pdf"
       }
+      {
+        title: "Rayleigh-Knight Prize presentation",
+        venue: "DPMMS, Cambridge University, United Kingdom",
+        lat: 52.2104,
+        lng: 0.1030, 
+        // Use a simple path string to avoid Liquid processing errors
+        pdf: "/files/Panteleimon_Tassopoulos_RK_slides.pdf"
+      }
     ];
 
     // 3. Add Markers
